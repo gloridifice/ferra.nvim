@@ -1,0 +1,1 @@
+require("ferra").load "ferra"

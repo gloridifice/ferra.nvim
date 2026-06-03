@@ -1,0 +1,12 @@
+doc/tags
+.vscode/
+.DS_Store
+.repro
+Thumbs.db
+
+# Environment
+.env
+.env.*
+
+# Ferra compiled cache
+*.compile

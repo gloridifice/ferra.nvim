@@ -1,0 +1,115 @@
+*ferra.txt*  A warm Neovim colorscheme
+
+================================================================================
+CONTENTS                                                        *ferra-contents*
+
+1. Introduction .............................................. |ferra-intro|
+2. Requirements ............................................ |ferra-requirements|
+3. Installation ............................................ |ferra-installation|
+4. Usage ................................................... |ferra-usage|
+5. Configuration ........................................... |ferra-configuration|
+6. Integrations ............................................ |ferra-integrations|
+
+================================================================================
+INTRODUCTION                                                        *ferra-intro*
+
+Ferra is a single-flavour dark colorscheme for Neovim, built on the
+architecture of catppuccin/nvim. It uses the warm, earthy ferra palette.
+
+================================================================================
+REQUIREMENTS                                                  *ferra-requirements*
+
+- Neovim >= 0.7.2
+- True color support (`set termguicolors`)
+
+================================================================================
+INSTALLATION                                                  *ferra-installation*
+
+Using lazy.nvim:
+>lua
+    { "ferra-theme/nvim", name = "ferra", priority = 1000 }
+<
+
+Using packer.nvim:
+>lua
+    use { "ferra-theme/nvim", as = "ferra" }
+<
+
+================================================================================
+USAGE                                                                *ferra-usage*
+
+Load the colorscheme:
+>vim
+    colorscheme ferra
+<
+
+Or from Lua:
+>lua
+    vim.cmd.colorscheme("ferra")
+<
+
+================================================================================
+CONFIGURATION                                                  *ferra-configuration*
+
+Ferra is configured through the `setup` function:
+
+>lua
+    require("ferra").setup({
+        transparent_background = false,
+        term_colors = false,
+        no_italic = false,
+        no_bold = false,
+        no_underline = false,
+        styles = {
+            comments = { "italic" },
+            conditionals = { "italic" },
+            loops = {},
+            functions = {},
+            keywords = {},
+            strings = {},
+            variables = {},
+            numbers = {},
+            booleans = {},
+            properties = {},
+            types = {},
+            operators = {},
+        },
+        integrations = {
+            blink_cmp = true,
+            cmp = true,
+            gitsigns = true,
+            nvimtree = true,
+            telescope = true,
+            treesitter = true,
+            -- see full list in types.lua
+        },
+        color_overrides = {},
+        highlight_overrides = {},
+    })
+<
+
+The compiled cache is stored in `vim.fn.stdpath("cache") .. "/ferra"`.
+You can force a recompile with:
+>vim
+    :FerraCompile
+<
+
+================================================================================
+INTEGRATIONS                                                  *ferra-integrations*
+
+lualine~
+>lua
+    require("lualine").setup({
+        options = { theme = "ferra" },
+    })
+<
+
+barbecue~
+>lua
+    require("barbecue").setup({
+        theme = "ferra",
+    })
+<
+
+================================================================================
+vim:tw=78:ts=8:ft=help:norl:
