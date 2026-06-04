@@ -1,8 +1,8 @@
 # ferra.nvim
 
-A warm, earthy Neovim colorscheme built on top of the [catppuccin](https://github.com/catppuccin/nvim) architecture.
+A warm, earthy Neovim colorscheme built on top of the [catppuccin/nvim](https://github.com/catppuccin/nvim) architecture.
 
-> **Ferra** is a single-flavour dark theme inspired by the [ferra](https://github.com/casperstorm/ferra) palette.
+This project is a neovim theme implementation of [**Ferra**](https://github.com/casperstorm/ferra) palette.
 
 ![screenshot_0](images/screenshot_0.png)
 
