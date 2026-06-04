@@ -11,7 +11,7 @@ local status, error = pcall(function()
 	vim.opt.runtimepath:prepend(lazypath)
 
 	require("lazy").setup({
-		{ "ferra-theme/nvim", dev = true },
+		{ "gloridifice/ferra.nvim", dev = true },
 	}, {
 		root = root .. "/plugins",
 		dev = {
