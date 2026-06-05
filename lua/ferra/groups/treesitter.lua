@@ -1,4 +1,4 @@
-﻿local M = {}
+local M = {}
 
 function M.get()
 	if vim.treesitter.highlighter.hl_map then
@@ -131,10 +131,10 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 		["@diff.delta"] = { link = "diffChanged" }, -- deleted text (for diff files)
 
 		-- Tags
-		["@tag"] = { fg = C.blue }, -- Tags like HTML tag names.
+		["@tag"] = { fg = C.sapphire }, -- Tags like HTML tag names.
 		["@tag.builtin"] = { fg = C.blue }, -- JSX tag names.
-		["@tag.attribute"] = { fg = C.yellow, style = O.styles.miscs or { "italic" } }, -- XML/HTML attributes (foo in foo="bar").
-		["@tag.delimiter"] = { fg = C.teal }, -- Tag delimiter like < > /
+		["@tag.attribute"] = { fg = C.blue, style = O.styles.miscs or { "italic" } }, -- XML/HTML attributes (foo in foo="bar").
+		["@tag.delimiter"] = { fg = C.text }, -- Tag delimiter like < > /
 
 		-- Misc
 		["@error"] = { link = "Error" },
@@ -166,13 +166,13 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 		["@constant.java"] = { fg = C.teal },
 
 		-- CSS
-		["@property.css"] = { fg = C.blue },
-		["@property.scss"] = { fg = C.blue },
-		["@property.id.css"] = { fg = C.yellow },
-		["@property.class.css"] = { fg = C.yellow },
+		["@property.css"] = { fg = C.text },
+		["@property.scss"] = { fg = C.text },
+		["@property.id.css"] = { fg = C.text },
+		["@property.class.css"] = { fg = C.blue },
 		["@type.css"] = { fg = C.lavender },
 		["@type.tag.css"] = { fg = C.blue },
-		["@string.plain.css"] = { fg = C.text },
+		["@string.plain.css"] = { fg = C.green },
 		["@number.css"] = { fg = C.peach },
 		["@keyword.directive.css"] = { link = "Keyword" }, -- CSS at-rules: https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule.
 
@@ -287,4 +287,3 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 end
 
 return M
-
