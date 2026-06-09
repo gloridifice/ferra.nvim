@@ -11,7 +11,7 @@ function M.get()
 		NoiceCmdlineIconSearch = { fg = C.yellow },
 		NoiceCmdlinePopupBorder = { fg = C.lavender },
 		NoiceCmdlinePopupBorderSearch = { fg = C.yellow },
-		NoiceConfirmBorder = { fg = C.blue },
+		NoiceConfirmBorder = { fg = C.coral },
 		NoiceMini = { fg = C.subtext0, blend = 0 },
 		NoiceFormatProgressDone = {
 			bg = O.transparent_background and C.none or U.darken(C.sky, 0.30, C.base),

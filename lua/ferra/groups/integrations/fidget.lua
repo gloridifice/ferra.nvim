@@ -8,7 +8,7 @@ function M.get()
 			bg = O.transparent_background and C.none or C.mantle,
 			fg = C.text,
 		},
-		FidgetTitle = { fg = C.blue },
+		FidgetTitle = { fg = C.coral },
 	}
 end
 

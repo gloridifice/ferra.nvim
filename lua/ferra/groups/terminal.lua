@@ -14,8 +14,8 @@ function M.get()
 		terminal_color_3 = C.yellow,
 		terminal_color_11 = C.yellow,
 
-		terminal_color_4 = C.blue,
-		terminal_color_12 = C.blue,
+		terminal_color_4 = C.coral,
+		terminal_color_12 = C.coral,
 
 		terminal_color_5 = C.pink,
 		terminal_color_13 = C.pink,

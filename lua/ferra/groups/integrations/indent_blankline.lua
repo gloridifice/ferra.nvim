@@ -13,7 +13,7 @@ function M.get()
 	if O.integrations.indent_blankline.colored_indent_levels then
 		hi["RainbowRed"] = { blend = 0, fg = C.red }
 		hi["RainbowYellow"] = { blend = 0, fg = C.yellow }
-		hi["RainbowBlue"] = { blend = 0, fg = C.blue }
+		hi["RainbowBlue"] = { blend = 0, fg = C.coral }
 		hi["RainbowOrange"] = { blend = 0, fg = C.peach }
 		hi["RainbowGreen"] = { blend = 0, fg = C.green }
 		hi["RainbowViolet"] = { blend = 0, fg = C.mauve }

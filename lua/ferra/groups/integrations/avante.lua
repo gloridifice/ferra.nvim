@@ -12,8 +12,8 @@ function M.get()
 		AvanteSubtitle = rounded and { bg = C.peach, fg = C.base } or { fg = C.peach },
 		AvanteReversedSubtitle = rounded and { bg = C.none, fg = C.peach } or { fg = C.peach },
 
-		AvanteThirdTitle = rounded and { bg = C.blue, fg = C.base } or { fg = C.blue },
-		AvanteReversedThirdTitle = rounded and { bg = C.none, fg = C.blue } or { fg = C.blue },
+		AvanteThirdTitle = rounded and { bg = C.coral, fg = C.base } or { fg = C.coral },
+		AvanteReversedThirdTitle = rounded and { bg = C.none, fg = C.coral } or { fg = C.coral },
 
 		-- hints
 		AvanteInlineHint = { fg = C.overlay0 },
@@ -33,11 +33,11 @@ function M.get()
 
 		AvanteConflictIncoming = {
 			bg = O.transparent_background and C.none or C.mantle,
-			fg = C.blue,
+			fg = C.coral,
 		},
 		AvanteConflictIncomingLabel = {
 			bg = O.transparent_background and C.none or C.mantle,
-			fg = C.blue,
+			fg = C.coral,
 		},
 
 		AvanteConflictAncestor = {

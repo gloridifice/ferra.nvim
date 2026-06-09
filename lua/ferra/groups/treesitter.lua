@@ -34,7 +34,7 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 		["@string.special"] = { link = "Special" }, -- other special strings (e.g. dates)
 		["@string.special.path"] = { link = "Special" }, -- filenames
 		["@string.special.symbol"] = { fg = C.flamingo }, -- symbols or atoms
-		["@string.special.url"] = { fg = C.blue, style = { "italic", "underline" } }, -- urls, links and emails
+		["@string.special.url"] = { fg = C.coral, style = { "italic", "underline" } }, -- urls, links and emails
 		["@punctuation.delimiter.regex"] = { link = "@string.regexp" },
 
 		["@character"] = { link = "Character" }, -- character literals
@@ -96,7 +96,7 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 
 		["@comment.error"] = { fg = C.base, bg = C.red },
 		["@comment.warning"] = { fg = C.base, bg = C.yellow },
-		["@comment.hint"] = { fg = C.base, bg = C.blue },
+		["@comment.hint"] = { fg = C.base, bg = C.coral },
 		["@comment.todo"] = { fg = C.base, bg = C.flamingo },
 		["@comment.note"] = { fg = C.base, bg = C.rosewater },
 
@@ -107,17 +107,17 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 		["@markup.strikethrough"] = { fg = C.text, style = { "strikethrough" } }, -- strikethrough text
 		["@markup.underline"] = { link = "Underlined" }, -- underlined text
 
-		["@markup.heading"] = { fg = C.blue }, -- titles like: # Example
+		["@markup.heading"] = { fg = C.coral }, -- titles like: # Example
 		["@markup.heading.markdown"] = { style = { "bold" } }, -- bold headings in markdown, but not in HTML or other markup
 
-		["@markup.math"] = { fg = C.blue }, -- math environments (e.g. `$ ... $` in LaTeX)
+		["@markup.math"] = { fg = C.coral }, -- math environments (e.g. `$ ... $` in LaTeX)
 		["@markup.quote"] = { fg = C.pink }, -- block quotes
 		["@markup.environment"] = { fg = C.pink }, -- text environments of markup languages
-		["@markup.environment.name"] = { fg = C.blue }, -- text indicating the type of an environment
+		["@markup.environment.name"] = { fg = C.coral }, -- text indicating the type of an environment
 
 		["@markup.link"] = { fg = C.lavender }, -- text references, footnotes, citations, etc.
 		["@markup.link.label"] = { fg = C.lavender }, -- link, reference descriptions
-		["@markup.link.url"] = { fg = C.blue, style = { "italic", "underline" } }, -- urls, links and emails
+		["@markup.link.url"] = { fg = C.coral, style = { "italic", "underline" } }, -- urls, links and emails
 
 		["@markup.raw"] = { fg = C.green }, -- used for inline code in markdown and for doc in python (""")
 
@@ -132,8 +132,8 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 
 		-- Tags
 		["@tag"] = { fg = C.sapphire }, -- Tags like HTML tag names.
-		["@tag.builtin"] = { fg = C.blue }, -- JSX tag names.
-		["@tag.attribute"] = { fg = C.blue, style = O.styles.miscs or { "italic" } }, -- XML/HTML attributes (foo in foo="bar").
+		["@tag.builtin"] = { fg = C.coral }, -- JSX tag names.
+		["@tag.attribute"] = { fg = C.coral, style = O.styles.miscs or { "italic" } }, -- XML/HTML attributes (foo in foo="bar").
 		["@tag.delimiter"] = { fg = C.text }, -- Tag delimiter like < > /
 
 		-- Misc
@@ -169,9 +169,9 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 		["@property.css"] = { fg = C.text },
 		["@property.scss"] = { fg = C.text },
 		["@property.id.css"] = { fg = C.text },
-		["@property.class.css"] = { fg = C.blue },
+		["@property.class.css"] = { fg = C.coral },
 		["@type.css"] = { fg = C.lavender },
-		["@type.tag.css"] = { fg = C.blue },
+		["@type.tag.css"] = { fg = C.coral },
 		["@string.plain.css"] = { fg = C.green },
 		["@number.css"] = { fg = C.peach },
 		["@keyword.directive.css"] = { link = "Keyword" }, -- CSS at-rules: https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule.

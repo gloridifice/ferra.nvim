@@ -6,13 +6,13 @@ function M.get()
 	local active_bg = O.transparent_background and C.none or C.mantle
 	local inactive_bg = O.transparent_background and C.none or C.base
 	return {
-		NeoTreeDirectoryName = { fg = C.blue },
-		NeoTreeDirectoryIcon = { fg = C.blue },
+		NeoTreeDirectoryName = { fg = C.coral },
+		NeoTreeDirectoryIcon = { fg = C.coral },
 		NeoTreeNormal = { fg = C.text, bg = active_bg },
 		NeoTreeNormalNC = { fg = C.text, bg = active_bg },
 		NeoTreeExpander = { fg = C.overlay0 },
 		NeoTreeIndentMarker = { fg = C.overlay0 },
-		NeoTreeRootName = { fg = C.blue, style = { "bold" } },
+		NeoTreeRootName = { fg = C.coral, style = { "bold" } },
 		NeoTreeSymbolicLinkTarget = { fg = C.pink },
 		NeoTreeModified = { fg = C.peach },
 
@@ -27,7 +27,7 @@ function M.get()
 
 		NeoTreeFloatBorder = { link = "FloatBorder" },
 		NeoTreeFloatTitle = { link = "FloatTitle" },
-		NeoTreeTitleBar = { fg = C.mantle, bg = C.blue },
+		NeoTreeTitleBar = { fg = C.mantle, bg = C.coral },
 
 		NeoTreeFileNameOpened = { fg = C.pink },
 		NeoTreeDimText = { fg = C.overlay1 },

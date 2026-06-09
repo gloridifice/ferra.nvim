@@ -13,7 +13,7 @@ function M.get()
 	local groups = {
 		MarkviewBlockQuoteDefault = { fg = C.overlay2, bg = C.mantle },
 		MarkviewBlockQuoteError = { fg = C.red, bg = U.darken(C.red, darkening_percentage, blockquote_bg) },
-		MarkviewBlockQuoteNote = { fg = C.blue, bg = U.darken(C.blue, darkening_percentage, blockquote_bg) },
+		MarkviewBlockQuoteNote = { fg = C.coral, bg = U.darken(C.coral, darkening_percentage, blockquote_bg) },
 		MarkviewBlockQuoteOk = { fg = C.green, bg = U.darken(C.green, darkening_percentage, blockquote_bg) },
 		MarkviewBlockQuoteSpecial = { fg = C.mauve, bg = U.darken(C.pink, darkening_percentage, blockquote_bg) },
 		MarkviewBlockQuoteWarn = { fg = C.yellow, bg = U.darken(C.yellow, darkening_percentage, blockquote_bg) },
@@ -25,7 +25,7 @@ function M.get()
 		MarkviewCodeInfo = { fg = C.overlay2, bg = C.mantle },
 		MarkviewInlineCode = { bg = C.surface0 },
 
-		MarkviewTableHeader = { fg = C.blue },
+		MarkviewTableHeader = { fg = C.coral },
 	}
 
 	local rainbow = {

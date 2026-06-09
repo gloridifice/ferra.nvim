@@ -12,7 +12,7 @@ function M.get()
 		BlinkIndentYellow = { fg = C.yellow },
 		BlinkIndentGreen = { fg = C.green },
 		BlinkIndentCyan = { fg = C.sky },
-		BlinkIndentBlue = { fg = C.blue },
+		BlinkIndentBlue = { fg = C.coral },
 		BlinkIndentViolet = { fg = C.mauve },
 
 		BlinkIndentRedUnderline = { sp = C.red, style = { "underline" } },
@@ -20,7 +20,7 @@ function M.get()
 		BlinkIndentYellowUnderline = { sp = C.yellow, style = { "underline" } },
 		BlinkIndentGreenUnderline = { sp = C.green, style = { "underline" } },
 		BlinkIndentCyanUnderline = { sp = C.sky, style = { "underline" } },
-		BlinkIndentBlueUnderline = { sp = C.blue, style = { "underline" } },
+		BlinkIndentBlueUnderline = { sp = C.coral, style = { "underline" } },
 		BlinkIndentVioletUnderline = { sp = C.mauve, style = { "underline" } },
 	}
 end

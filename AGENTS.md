@@ -61,6 +61,6 @@ Tests live in `tests/` and use plenary.nvim's busted wrapper. CI runs them on ev
 
 ## Gotchas
 
-- `lua/ferra/groups/` still uses catppuccin palette key names (`C.blue`, `C.pink`, etc.) because the 11 ferra colours are **mapped** onto those 26 keys. Don't rename the keys unless you also rewrite every group file.
+- `lua/ferra/groups/` still uses catppuccin palette key names (`C.coral`, `C.pink`, etc.) because the 11 ferra colours are **mapped** onto those 26 keys. Don't rename the keys unless you also rewrite every group file.
 - `@property` and `@variable.member` were previously `lavender` (rose) and were changed to `text` (blush) per user request. If debugging colour issues, use `:Inspect` on the token under cursor.
 - The `weaken_delimiters` option toggles `Delimiter` and `@punctuation.bracket` between `C.text` (blush, default) and `C.overlay2` (bark).

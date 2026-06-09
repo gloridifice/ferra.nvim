@@ -11,7 +11,7 @@ return {
 	teal = "#B1B695",
 	sky = "#D1D1E0",
 	sapphire = "#D1D1E0",
-	blue = "#ffa07a",
+	coral = "#ffa07a",
 	lavender = "#F6B6C9",
 	text = "#fecdb2",
 	subtext1 = "#fecdb2",

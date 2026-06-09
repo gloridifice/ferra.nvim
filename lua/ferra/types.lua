@@ -1,11 +1,11 @@
-﻿---@class Ferra
+---@class Ferra
 ---@field options FerraOptions
 ---@field setup fun(opts: FerraOptions?)
 
 ---@alias FerraFlavor "ferra"
----@alias FerraColor "rosewater" | "flamingo" | "pink" | "mauve" | "red" | "maroon" | "peach" | "yellow" | "green" | "teal" | "sky" | "sapphire" | "blue" | "lavender" | "text" | "subtext1" | "subtext0" | "overlay2" | "overlay1" | "overlay0" | "surface2" | "surface1" | "surface0" | "base" | "mantle" | "crust"
+---@alias FerraColor "rosewater" | "flamingo" | "pink" | "mauve" | "red" | "maroon" | "peach" | "yellow" | "green" | "teal" | "sky" | "sapphire" | "coral" | "lavender" | "text" | "subtext1" | "subtext0" | "overlay2" | "overlay1" | "overlay0" | "surface2" | "surface1" | "surface0" | "base" | "mantle" | "crust"
 ---@class FerraFlavors<T>: {all: T, ferra: T }
----@class FerraColors<T>: {rosewater: T, flamingo: T, pink: T, mauve: T, red: T, maroon: T, peach: T, yellow: T, green: T, teal: T, sky: T, sapphire: T, blue: T, lavender: T, text: T, subtext1: T, subtext0: T, overlay2: T, overlay1: T, overlay0: T, surface2: T, surface1: T, surface0: T, base: T, mantle: T, crust: T, none: T }
+---@class FerraColors<T>: {rosewater: T, flamingo: T, pink: T, mauve: T, red: T, maroon: T, peach: T, yellow: T, green: T, teal: T, sky: T, sapphire: T, coral: T, lavender: T, text: T, subtext1: T, subtext0: T, overlay2: T, overlay1: T, overlay0: T, surface2: T, surface1: T, surface0: T, base: T, mantle: T, crust: T, none: T }
 
 ---@class FerraOptions
 -- Changes the flavor based on the background. See `:h background` for more info.
@@ -122,7 +122,7 @@
 ---@field alpha boolean?
 ---@field artio boolean?
 ---@field avante FerraIntegrationAvante | boolean?
-...
+--...
 ---@class FerraIntegrationAvante
 --  Whether the opts.windows.sidebar_header.rounded option is set on Avante
 ---@field enabled boolean
@@ -225,4 +225,3 @@
 ---@field bg string?
 ---@field style FerraHighlightArgs[]?
 ---@field link string?
-

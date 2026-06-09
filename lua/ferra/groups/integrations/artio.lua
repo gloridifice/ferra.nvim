@@ -15,9 +15,9 @@ function M.get()
 			bg = C.surface0,
 			style = { "bold" },
 		},
-		ArtioMatch = { fg = C.blue },
+		ArtioMatch = { fg = C.coral },
 		ArtioPointer = { fg = C.flamingo },
-		ArtioPrompt = { fg = C.blue },
+		ArtioPrompt = { fg = C.coral },
 		ArtioMark = { fg = C.yellow },
 		ArtioMarkLine = { link = "Visual" },
 	}

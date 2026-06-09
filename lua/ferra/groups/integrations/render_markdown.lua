@@ -10,7 +10,7 @@ function M.get()
 		RenderMarkdownCode = { bg = C.mantle },
 		RenderMarkdownCodeInline = { bg = C.surface0 },
 		RenderMarkdownBullet = { fg = C.sky },
-		RenderMarkdownTableHead = { fg = C.blue },
+		RenderMarkdownTableHead = { fg = C.coral },
 		RenderMarkdownTableRow = { fg = C.lavender },
 		RenderMarkdownSuccess = { fg = C.green },
 		RenderMarkdownInfo = { fg = C.sky },

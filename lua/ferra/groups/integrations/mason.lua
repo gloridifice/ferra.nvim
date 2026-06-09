@@ -6,8 +6,8 @@ function M.get()
 	local bg = O.transparent_background and C.none or C.lavender
 	local fg = O.transparent_background and C.lavender or C.base
 
-	local secondary_bg = O.transparent_background and C.none or C.blue
-	local secondary_fg = O.transparent_background and C.blue or C.base
+	local secondary_bg = O.transparent_background and C.none or C.coral
+	local secondary_fg = O.transparent_background and C.coral or C.base
 
 	local muted_bg = O.transparent_background and C.none or C.overlay0
 	local muted_fg = O.transparent_background and C.overlay0 or C.base

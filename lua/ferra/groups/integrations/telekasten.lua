@@ -4,7 +4,7 @@ M.url = "https://github.com/nvim-telekasten/telekasten.nvim"
 
 function M.get()
 	return {
-		tkLink = { fg = C.blue },
+		tkLink = { fg = C.coral },
 		tkBrackets = { fg = C.pink },
 		tkTag = { fg = C.sky },
 	}

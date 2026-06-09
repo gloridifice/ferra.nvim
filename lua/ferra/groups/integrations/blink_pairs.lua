@@ -6,7 +6,7 @@ function M.get()
 	return {
 		BlinkPairsRed = { fg = C.red },
 		BlinkPairsYellow = { fg = C.yellow },
-		BlinkPairsBlue = { fg = C.blue },
+		BlinkPairsBlue = { fg = C.coral },
 		BlinkPairsOrange = { fg = C.peach },
 		BlinkPairsGreen = { fg = C.green },
 		BlinkPairsPurple = { fg = C.mauve },

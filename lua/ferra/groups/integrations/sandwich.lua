@@ -4,10 +4,10 @@ M.url = "https://github.com/machakann/vim-sandwich"
 
 function M.get()
 	return {
-		OperatorSandwichAdd = { bg = C.blue, fg = C.base },
-		OperatorSandwichBuns = { bg = C.blue, fg = C.base },
-		OperatorSandwichChange = { bg = C.blue, fg = C.base },
-		OperatorSandwichDelete = { bg = C.blue, fg = C.base },
+		OperatorSandwichAdd = { bg = C.coral, fg = C.base },
+		OperatorSandwichBuns = { bg = C.coral, fg = C.base },
+		OperatorSandwichChange = { bg = C.coral, fg = C.base },
+		OperatorSandwichDelete = { bg = C.coral, fg = C.base },
 	}
 end
 

@@ -28,12 +28,12 @@ function M.get()
 			link = "Comment",
 		},
 		NeogitHunkHeader = {
-			bg = U.darken(C.blue, 0.095, C.base),
-			fg = U.darken(C.blue, 0.5, C.base),
+			bg = U.darken(C.coral, 0.095, C.base),
+			fg = U.darken(C.coral, 0.5, C.base),
 		},
 		NeogitHunkHeaderHighlight = {
-			bg = U.darken(C.blue, 0.215, C.base),
-			fg = C.blue,
+			bg = U.darken(C.coral, 0.215, C.base),
+			fg = C.coral,
 		},
 		NeogitDiffContextHighlight = {
 			bg = C.surface0,
@@ -63,11 +63,11 @@ function M.get()
 			style = { "bold" },
 		},
 		NeogitCommitViewHeader = {
-			bg = U.darken(C.blue, 0.300, C.base),
-			fg = U.lighten(C.blue, 0.800, C.text),
+			bg = U.darken(C.coral, 0.300, C.base),
+			fg = U.lighten(C.coral, 0.800, C.text),
 		},
 		NeogitChangeModified = {
-			fg = C.blue,
+			fg = C.coral,
 			style = { "bold" },
 		},
 		NeogitChangeDeleted = {
@@ -131,7 +131,7 @@ function M.get()
 			style = { "bold" },
 		},
 		NeogitNotificationInfo = {
-			fg = C.blue,
+			fg = C.coral,
 		},
 		NeogitNotificationWarning = {
 			fg = C.yellow,
@@ -152,10 +152,10 @@ function M.get()
 			fg = C.green,
 		},
 		NeogitGraphCyan = {
-			fg = C.blue,
+			fg = C.coral,
 		},
 		NeogitGraphBlue = {
-			fg = C.blue,
+			fg = C.coral,
 		},
 		NeogitGraphPurple = {
 			fg = C.lavender,
@@ -183,11 +183,11 @@ function M.get()
 			style = { "bold" },
 		},
 		NeogitGraphBoldCyan = {
-			fg = C.blue,
+			fg = C.coral,
 			style = { "bold" },
 		},
 		NeogitGraphBoldBlue = {
-			fg = C.blue,
+			fg = C.coral,
 			style = { "bold" },
 		},
 		NeogitGraphBoldPurple = {
@@ -217,12 +217,12 @@ function M.get()
 			fg = C.lavender,
 		},
 		NeogitFilePath = {
-			fg = C.blue,
+			fg = C.coral,
 			style = { "italic" },
 		},
 		NeogitDiffHeader = {
 			bg = C.base,
-			fg = C.blue,
+			fg = C.coral,
 			style = { "bold" },
 		},
 		NeogitDiffHeaderHighlight = {
@@ -246,7 +246,7 @@ function M.get()
 			fg = C.yellow,
 		},
 		NeogitTagDistance = {
-			fg = C.blue,
+			fg = C.coral,
 		},
 		NeogitWinSeparator = {
 			link = "WinSeparator",

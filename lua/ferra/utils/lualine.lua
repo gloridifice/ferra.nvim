@@ -17,8 +17,8 @@ return function(flavour)
 	local transparent_bg = O.transparent_background and "NONE" or C.mantle
 	local default_colors = {
 		normal = {
-			a = { bg = C.blue, fg = C.mantle, gui = "bold" },
-			b = { bg = C.surface0, fg = C.blue },
+			a = { bg = C.coral, fg = C.mantle, gui = "bold" },
+			b = { bg = C.surface0, fg = C.coral },
 			c = { bg = transparent_bg, fg = C.text },
 		},
 
@@ -45,7 +45,7 @@ return function(flavour)
 			b = { bg = C.surface0, fg = C.red },
 		},
 		inactive = {
-			a = { bg = transparent_bg, fg = C.blue },
+			a = { bg = transparent_bg, fg = C.coral },
 			b = { bg = transparent_bg, fg = C.surface1, gui = "bold" },
 			c = { bg = transparent_bg, fg = C.overlay0 },
 		},

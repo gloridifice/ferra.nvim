@@ -6,7 +6,7 @@ function M.get()
 	return {
 		-- colors
 		OctoGrey = { fg = C.base },
-		OctoBlue = { fg = C.blue },
+		OctoBlue = { fg = C.coral },
 		OctoGreen = { fg = C.green },
 		OctoRed = { fg = C.red },
 		OctoPurple = { fg = C.mauve },
@@ -25,7 +25,7 @@ function M.get()
 		OctoDetailsValue = { link = "Identifier" },
 		OctoDiffHunkPosition = { link = "NormalFloat" },
 		OctoCommentLine = { link = "TabLineSel" },
-		OctoViewer = { fg = C.base, bg = C.blue },
+		OctoViewer = { fg = C.base, bg = C.coral },
 		OctoBubble = { fg = C.text, bg = C.base },
 		OctoBubbleGrey = { fg = C.text, bg = C.base },
 		OctoBubbleDelimiterGrey = { fg = C.base },
@@ -65,8 +65,8 @@ function M.get()
 		OctoStateDismissed = { link = "OctoStateClosed" },
 		OctoStateDismissedFloat = { link = "OctoStateClosed" },
 		OctoStateSubmittedBubble = { link = "OctoBubbleGreen" },
-		OctoFilePanelCounter = { fg = C.blue, style = { "bold" } },
-		OctoFilePanelTitle = { fg = C.blue, style = { "bold" } },
+		OctoFilePanelCounter = { fg = C.coral, style = { "bold" } },
+		OctoFilePanelTitle = { fg = C.coral, style = { "bold" } },
 		OctoFilePanelFileName = {},
 		OctoNormalFront = { fg = C.text },
 		OctoYellowFloat = { fg = C.yellow, bg = C.base },
@@ -74,7 +74,7 @@ function M.get()
 		OctoRedFloat = { fg = C.red, bg = C.base },
 		OctoGreenFloat = { fg = C.green, bg = C.base },
 		OctoGreyFloat = { fg = C.text, bg = C.base },
-		OctoBlueFloat = { fg = C.blue, bg = C.base },
+		OctoBlueFloat = { fg = C.coral, bg = C.base },
 		OctoReviewDiffAddText = { bg = U.darken(C.green, 0.30, C.base) },
 		OctoReviewDiffDeleteText = { bg = U.darken(C.red, 0.30, C.base) },
 	}

@@ -1,6 +1,11 @@
-﻿local M = {}
+local M = {}
 
 function M.get()
+	local diff_add = { bg = U.darken(C.green, 0.18, C.base) }
+	local diff_change = { bg = U.darken(C.coral, 0.07, C.base) }
+	local diff_delete = { bg = U.darken(C.red, 0.18, C.base) }
+	local diff_text = { bg = U.darken(C.coral, 0.30, C.base) }
+
 	return {
 		Comment = { fg = C.overlay2, style = O.styles.comments }, -- just comments
 		SpecialComment = { link = "Special" }, -- special things inside a comment
@@ -11,7 +16,7 @@ function M.get()
 		Float = { link = "Number" }, --    a floating point constant: 2.3e10
 		Boolean = { fg = C.peach, style = O.styles.booleans or {} }, --  a boolean constant: TRUE, false
 		Identifier = { fg = C.text, style = O.styles.variables or {} }, -- (preferred) any variable name
-		Function = { fg = C.blue, style = O.styles.functions or {} }, -- function name (also: methods for classes)
+		Function = { fg = C.coral, style = O.styles.functions or {} }, -- function name (also: methods for classes)
 		Statement = { fg = C.mauve }, -- (preferred) any statement
 		Conditional = { fg = C.mauve, style = O.styles.conditionals or {} }, --  if, then, else, endif, switch, etc.
 		Repeat = { fg = C.mauve, style = O.styles.loops or {} }, --   for, do, while, etc.
@@ -45,15 +50,15 @@ function M.get()
 		Error = { fg = C.red }, -- (preferred) any erroneous construct
 		Todo = { bg = C.flamingo, fg = C.base, style = { "bold" } }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 		qfLineNr = { fg = C.yellow },
-		qfFileName = { fg = C.blue },
+		qfFileName = { fg = C.coral },
 		htmlH1 = { fg = C.pink, style = { "bold" } },
-		htmlH2 = { fg = C.blue, style = { "bold" } },
+		htmlH2 = { fg = C.coral, style = { "bold" } },
 		-- mkdHeading = { fg = C.peach, style = { "bold" } },
 		-- mkdCode = { bg = C.terminal_black, fg = C.text },
 		mkdCodeDelimiter = { bg = C.base, fg = C.text },
 		mkdCodeStart = { fg = C.flamingo, style = { "bold" } },
 		mkdCodeEnd = { fg = C.flamingo, style = { "bold" } },
-		-- mkdLink = { fg = C.blue, style = { "underline" } },
+		-- mkdLink = { fg = C.coral, style = { "underline" } },
 
 		-- debugging
 		debugPC = { bg = O.transparent_background and C.none or C.crust }, -- used for highlighting the current line in terminal-debug
@@ -63,19 +68,31 @@ function M.get()
 		illuminatedCurWord = { bg = C.surface1 },
 		-- diff
 		Added = { fg = C.green },
-		Changed = { fg = C.blue },
+		Changed = { fg = C.coral },
 		diffAdded = { fg = C.green },
 		diffRemoved = { fg = C.red },
-		diffChanged = { fg = C.blue },
+		diffChanged = { fg = C.coral },
 		diffOldFile = { fg = C.yellow },
 		diffNewFile = { fg = C.peach },
-		diffFile = { fg = C.blue },
+		diffFile = { fg = C.coral },
 		diffLine = { fg = C.overlay0 },
 		diffIndexLine = { fg = C.teal },
-		DiffAdd = { bg = U.darken(C.green, 0.18, C.base) }, -- diff mode: Added line |diff.txt|
-		DiffChange = { bg = U.darken(C.blue, 0.07, C.base) }, -- diff mode: Changed line |diff.txt|
-		DiffDelete = { bg = U.darken(C.red, 0.18, C.base) }, -- diff mode: Deleted line |diff.txt|
-		DiffText = { bg = U.darken(C.blue, 0.30, C.base) }, -- diff mode: Changed text within a changed line |diff.txt|
+		DiffAdd = diff_add, -- diff mode: Added line |diff.txt|
+		DiffChange = diff_change, -- diff mode: Changed line |diff.txt|
+		DiffDelete = diff_delete, -- diff mode: Deleted line |diff.txt|
+		DiffText = diff_text, -- diff mode: Changed text within a changed line |diff.txt|
+
+		DiffviewWinSeparator = { fg = C.overlay0 },
+		DiffviewDiffDelete = diff_delete,
+		DiffviewFilePanelSelected = { fg = C.text },
+
+		DiffviewStatusAdded = diff_add,
+		DiffviewStatusUntracked = diff_change,
+		DiffviewStatusModified = diff_change,
+		DiffviewStatusRenamed = diff_change,
+		DiffviewStatusDeleted = diff_delete,
+		DiffviewStatusIgnored = diff_text,
+
 		-- NeoVim
 		healthError = { fg = C.red },
 		healthSuccess = { fg = C.teal },
@@ -86,7 +103,7 @@ function M.get()
 		GlyphPalette1 = { fg = C.red },
 		GlyphPalette2 = { fg = C.teal },
 		GlyphPalette3 = { fg = C.yellow },
-		GlyphPalette4 = { fg = C.blue },
+		GlyphPalette4 = { fg = C.coral },
 		GlyphPalette6 = { fg = C.teal },
 		GlyphPalette7 = { fg = C.text },
 		GlyphPalette9 = { fg = C.red },
@@ -105,7 +122,7 @@ function M.get()
 		csvCol2 = { fg = C.yellow },
 		csvCol3 = { fg = C.green },
 		csvCol4 = { fg = C.sky },
-		csvCol5 = { fg = C.blue },
+		csvCol5 = { fg = C.coral },
 		csvCol6 = { fg = C.lavender },
 		csvCol7 = { fg = C.mauve },
 		csvCol8 = { fg = C.pink },
@@ -114,7 +131,7 @@ function M.get()
 		markdownHeadingDelimiter = { fg = C.peach, style = { "bold" } },
 		markdownCode = { fg = C.flamingo },
 		markdownCodeBlock = { fg = C.flamingo },
-		markdownLinkText = { fg = C.blue, style = { "underline" } },
+		markdownLinkText = { fg = C.coral, style = { "underline" } },
 		markdownH1 = { link = "rainbow1" },
 		markdownH2 = { link = "rainbow2" },
 		markdownH3 = { link = "rainbow3" },
@@ -125,4 +142,3 @@ function M.get()
 end
 
 return M
-

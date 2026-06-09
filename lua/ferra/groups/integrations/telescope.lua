@@ -16,7 +16,7 @@ function M.get()
 			bg = C.surface0,
 			style = { "bold" },
 		},
-		TelescopeMatching = { fg = C.blue },
+		TelescopeMatching = { fg = C.coral },
 		TelescopePromptPrefix = { fg = C.flamingo },
 	}
 

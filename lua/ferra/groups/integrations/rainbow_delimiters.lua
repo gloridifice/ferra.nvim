@@ -6,7 +6,7 @@ function M.get()
 	return {
 		RainbowDelimiterRed = { fg = C.red },
 		RainbowDelimiterYellow = { fg = C.yellow },
-		RainbowDelimiterBlue = { fg = C.blue },
+		RainbowDelimiterBlue = { fg = C.coral },
 		RainbowDelimiterOrange = { fg = C.peach },
 		RainbowDelimiterGreen = { fg = C.green },
 		RainbowDelimiterViolet = { fg = C.mauve },

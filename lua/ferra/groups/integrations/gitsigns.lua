@@ -21,7 +21,7 @@ function M.get()
 			-- for word diff in previews
 			GitSignsAddInline = { fg = C.base, bg = C.green, style = { "bold" } },
 			GitSignsDeleteInline = { fg = C.base, bg = C.red, style = { "bold" } },
-			GitSignsChangeInline = { fg = C.base, bg = C.blue, style = { "bold" } },
+			GitSignsChangeInline = { fg = C.base, bg = C.coral, style = { "bold" } },
 
 			GitSignsDeleteVirtLn = { bg = C.none, fg = C.red },
 		}
@@ -37,7 +37,7 @@ function M.get()
 			GitSignsDeletePreview = { link = "DiffDelete" },
 
 			GitSignsAddInline = { bg = U.darken(C.green, 0.36, C.base) },
-			GitSignsChangeInline = { bg = U.darken(C.blue, 0.14, C.base) },
+			GitSignsChangeInline = { bg = U.darken(C.coral, 0.14, C.base) },
 			GitSignsDeleteInline = { bg = U.darken(C.red, 0.36, C.base) },
 		}
 	end
