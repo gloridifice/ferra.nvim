@@ -1,4 +1,4 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/echasnovski/mini.nvim"
 
@@ -23,8 +23,8 @@ function M.get()
 
 		MiniCompletionActiveParameter = { style = { "underline" } },
 
-		MiniCursorword = { style = { "underline" } },
-		MiniCursorwordCurrent = { style = { "underline" } },
+		MiniCursorword = { bg = C.surface0, style = { "bold" } },
+		MiniCursorwordCurrent = { bg = C.surface0, style = { "bold" } },
 
 		MiniDepsChangeAdded = { link = "diffAdded" },
 		MiniDepsChangeRemoved = { link = "diffRemoved" },
@@ -148,14 +148,14 @@ function M.get()
 
 		MiniSurround = { bg = C.pink, fg = C.surface1 },
 
-		MiniTablineCurrent = { fg = C.text, bg = C.base, sp = C.red, style = { "bold", "italic", "underline" } },
-		MiniTablineFill = { bg = bg_highlight },
-		MiniTablineHidden = { fg = C.text, bg = inactive_bg },
-		MiniTablineModifiedCurrent = { fg = C.red, bg = C.none, style = { "bold", "italic" } },
-		MiniTablineModifiedHidden = { fg = C.red, bg = C.none },
-		MiniTablineModifiedVisible = { fg = C.red, bg = C.none },
+		MiniTablineCurrent = { fg = C.text, bg = C.none, sp = C.red, style = { "bold", "italic" } },
+		MiniTablineFill = { bg = C.base },
+		MiniTablineHidden = { fg = C.overlay2, bg = C.base },
+		MiniTablineModifiedCurrent = { fg = C.red, bg = inactive_bg, style = { "bold", "italic" } },
+		MiniTablineModifiedHidden = { fg = C.red, bg = C.base },
+		MiniTablineModifiedVisible = { fg = C.red, bg = C.base },
 		MiniTablineTabpagesection = { fg = C.surface1, bg = C.base },
-		MiniTablineVisible = { bg = C.none },
+		MiniTablineVisible = { fg = C.overlay2, bg = C.base },
 
 		MiniTestEmphasis = { style = { "bold" } },
 		MiniTestFail = { fg = C.red, style = { "bold" } },
@@ -166,4 +166,3 @@ function M.get()
 end
 
 return M
-

@@ -56,6 +56,7 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 		["@function"] = { link = "Function" }, -- For function (calls and definitions).
 		["@function.builtin"] = { fg = C.peach, style = O.styles.functions or {} }, -- For builtin functions: table.insert in Lua.
 		["@function.call"] = { link = "Function" }, -- function calls
+		["@function.call.wgsl"] = { link = "Function", force = true }, -- function calls
 		["@function.macro"] = { fg = C.pink, style = O.styles.functions or {} }, -- For macro defined functions (calls and definitions): each macro_rules in Rust.
 
 		["@function.method"] = { link = "Function" }, -- For method definitions.
@@ -92,7 +93,7 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 
 		-- Comment
 		["@comment"] = { link = "Comment" },
-		["@comment.documentation"] = { link = "Comment" }, -- For comments documenting code
+		["@comment.documentation"] = { fg = C.green }, -- For comments documenting code
 
 		["@comment.error"] = { fg = C.base, bg = C.red },
 		["@comment.warning"] = { fg = C.base, bg = C.yellow },

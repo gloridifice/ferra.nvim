@@ -10,7 +10,6 @@ function M.get()
 		},
 		TreesitterContextBottom = {
 			sp = O.transparent_background and C.dim or C.surface0,
-			style = { "underline" },
 		},
 		TreesitterContextLineNumber = O.transparent_background and {
 			fg = C.rosewater,

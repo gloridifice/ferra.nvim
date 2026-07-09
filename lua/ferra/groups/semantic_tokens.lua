@@ -1,4 +1,4 @@
-﻿local M = {}
+local M = {}
 
 function M.get()
 	if vim.treesitter.highlighter.hl_map then
@@ -27,8 +27,8 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 		-- allow lsp to override treesitter
 		["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
 		["@lsp.typemod.function.builtin"] = { link = "@function.builtin" },
+		["@lsp.mod.documentation.rust"] = { fg = C.green },
 	}
 end
 
 return M
-
