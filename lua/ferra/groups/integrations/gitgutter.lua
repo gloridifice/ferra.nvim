@@ -1,15 +1,15 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/airblade/vim-gitgutter"
 
 function M.get()
 	return {
-		GitGutterAdd = { fg = C.green },
-		GitGutterChange = { fg = C.yellow },
-		GitGutterDelete = { fg = C.red },
-		GitGutterAddLineNr = { fg = C.green },
-		GitGutterChangeLineNr = { fg = C.yellow },
-		GitGutterDeleteLineNr = { fg = C.red },
+		GitGutterAdd = { fg = C.sage },
+		GitGutterChange = { fg = C.honey },
+		GitGutterDelete = { fg = C.ember },
+		GitGutterAddLineNr = { fg = C.sage },
+		GitGutterChangeLineNr = { fg = C.honey },
+		GitGutterDeleteLineNr = { fg = C.ember },
 	}
 end
 

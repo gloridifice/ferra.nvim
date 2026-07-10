@@ -1,43 +1,43 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/hrsh7th/nvim-cmp"
 
 function M.get()
 	return {
-		CmpItemAbbr = { fg = C.overlay2 },
-		CmpItemAbbrDeprecated = { fg = C.overlay0, style = { "strikethrough" } },
+		CmpItemAbbr = { fg = C.bg3 },
+		CmpItemAbbrDeprecated = { fg = C.bg3, style = { "strikethrough" } },
 		CmpItemKind = { fg = C.coral },
-		CmpItemMenu = { fg = C.text },
-		CmpItemAbbrMatch = { fg = C.text, style = { "bold" } },
-		CmpItemAbbrMatchFuzzy = { fg = C.text, style = { "bold" } },
+		CmpItemMenu = { fg = C.blush },
+		CmpItemAbbrMatch = { fg = C.blush, style = { "bold" } },
+		CmpItemAbbrMatchFuzzy = { fg = C.blush, style = { "bold" } },
 
 		-- kind support
 		CmpItemKindSnippet = { fg = C.mauve },
-		CmpItemKindKeyword = { fg = C.red },
-		CmpItemKindText = { fg = C.teal },
+		CmpItemKindKeyword = { fg = C.ember },
+		CmpItemKindText = { fg = C.sage },
 		CmpItemKindMethod = { fg = C.coral },
 		CmpItemKindConstructor = { fg = C.coral },
 		CmpItemKindFunction = { fg = C.coral },
 		CmpItemKindFolder = { fg = C.coral },
 		CmpItemKindModule = { fg = C.coral },
-		CmpItemKindConstant = { fg = C.peach },
-		CmpItemKindField = { fg = C.green },
-		CmpItemKindProperty = { fg = C.green },
-		CmpItemKindEnum = { fg = C.green },
-		CmpItemKindUnit = { fg = C.green },
-		CmpItemKindClass = { fg = C.yellow },
-		CmpItemKindVariable = { fg = C.flamingo },
+		CmpItemKindConstant = { fg = C.coral },
+		CmpItemKindField = { fg = C.sage },
+		CmpItemKindProperty = { fg = C.sage },
+		CmpItemKindEnum = { fg = C.sage },
+		CmpItemKindUnit = { fg = C.sage },
+		CmpItemKindClass = { fg = C.honey },
+		CmpItemKindVariable = { fg = C.coral },
 		CmpItemKindFile = { fg = C.coral },
-		CmpItemKindInterface = { fg = C.yellow },
-		CmpItemKindColor = { fg = C.red },
-		CmpItemKindReference = { fg = C.red },
-		CmpItemKindEnumMember = { fg = C.red },
+		CmpItemKindInterface = { fg = C.honey },
+		CmpItemKindColor = { fg = C.ember },
+		CmpItemKindReference = { fg = C.ember },
+		CmpItemKindEnumMember = { fg = C.ember },
 		CmpItemKindStruct = { fg = C.coral },
-		CmpItemKindValue = { fg = C.peach },
+		CmpItemKindValue = { fg = C.coral },
 		CmpItemKindEvent = { fg = C.coral },
 		CmpItemKindOperator = { fg = C.coral },
 		CmpItemKindTypeParameter = { fg = C.coral },
-		CmpItemKindCopilot = { fg = C.teal },
+		CmpItemKindCopilot = { fg = C.sage },
 	}
 end
 

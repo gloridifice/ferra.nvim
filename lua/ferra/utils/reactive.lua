@@ -1,4 +1,4 @@
-﻿local M = {}
+local M = {}
 
 function M.cursor(name, palette)
 	return {
@@ -7,24 +7,24 @@ function M.cursor(name, palette)
 		modes = {
 			n = {
 				hl = {
-					ReactiveCursor = { bg = palette.yellow },
+					ReactiveCursor = { bg = palette.honey },
 				},
 			},
 			i = {
 				hl = {
-					ReactiveCursor = { bg = palette.teal },
+					ReactiveCursor = { bg = palette.sage },
 				},
 			},
 			no = {
 				operators = {
 					d = {
 						hl = {
-							ReactiveCursor = { bg = palette.red },
+							ReactiveCursor = { bg = palette.ember },
 						},
 					},
 					y = {
 						hl = {
-							ReactiveCursor = { bg = palette.peach },
+							ReactiveCursor = { bg = palette.coral },
 						},
 					},
 					c = {
@@ -36,7 +36,7 @@ function M.cursor(name, palette)
 			},
 			R = {
 				hl = {
-					ReactiveCursor = { bg = palette.sapphire },
+					ReactiveCursor = { bg = palette.mist },
 				},
 			},
 			-- visual
@@ -48,7 +48,7 @@ function M.cursor(name, palette)
 			-- select
 			[{ "s", "S", "\x13" }] = {
 				hl = {
-					ReactiveCursor = { bg = palette.pink },
+					ReactiveCursor = { bg = palette.rose },
 				},
 			},
 		},
@@ -72,8 +72,8 @@ function M.cursorline(name, palette)
 			-- insert mode
 			i = {
 				winhl = {
-					CursorLine = { bg = darken(palette.sky, 0.3) },
-					CursorLineNr = { bg = darken(palette.sky, 0.3) },
+					CursorLine = { bg = darken(palette.mist, 0.3) },
+					CursorLineNr = { bg = darken(palette.mist, 0.3) },
 				},
 			},
 			-- normal mode
@@ -88,22 +88,22 @@ function M.cursorline(name, palette)
 				operators = {
 					[{ "gu", "gU", "g~", "~" }] = {
 						winhl = {
-							CursorLine = { bg = palette.surface2 },
-							CursorLineNr = { bg = palette.surface2 },
+							CursorLine = { bg = palette.bg2 },
+							CursorLineNr = { bg = palette.bg2 },
 						},
 					},
 					-- delete operator
 					d = {
 						winhl = {
-							CursorLine = { bg = darken(palette.red, 0.4) },
-							CursorLineNr = { bg = darken(palette.red, 0.4) },
+							CursorLine = { bg = darken(palette.ember, 0.4) },
+							CursorLineNr = { bg = darken(palette.ember, 0.4) },
 						},
 					},
 					-- yank operator
 					y = {
 						winhl = {
-							CursorLine = { bg = darken(palette.peach, 0.3) },
-							CursorLineNr = { bg = darken(palette.peach, 0.3) },
+							CursorLine = { bg = darken(palette.coral, 0.3) },
+							CursorLineNr = { bg = darken(palette.coral, 0.3) },
 						},
 					},
 					-- change operator
@@ -117,8 +117,8 @@ function M.cursorline(name, palette)
 			},
 			R = {
 				winhl = {
-					CursorLine = { bg = darken(palette.sapphire, 0.4) },
-					CursorLineNr = { bg = darken(palette.sapphire, 0.4) },
+					CursorLine = { bg = darken(palette.mist, 0.4) },
+					CursorLineNr = { bg = darken(palette.mist, 0.4) },
 				},
 			},
 			-- visual mode
@@ -130,7 +130,7 @@ function M.cursorline(name, palette)
 			-- select mode
 			[{ "s", "S", "\x13" }] = {
 				winhl = {
-					Visual = { bg = darken(palette.pink, 0.4) },
+					Visual = { bg = darken(palette.rose, 0.4) },
 				},
 			},
 		},

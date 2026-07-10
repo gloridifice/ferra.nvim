@@ -1,11 +1,11 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/stevearc/aerial.nvim"
 
 function M.get()
 	return {
-		AerialLine = { fg = C.yellow, bg = C.none },
-		AerialGuide = { fg = C.overlay2 },
+		AerialLine = { fg = C.honey, bg = C.none },
+		AerialGuide = { fg = C.bg3 },
 		AerialBooleanIcon = { link = "@boolean" },
 		AerialClassIcon = { link = "@type" },
 		AerialConstantIcon = { link = "@constant" },

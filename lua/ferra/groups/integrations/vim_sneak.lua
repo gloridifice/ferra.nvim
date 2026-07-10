@@ -1,11 +1,11 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/justinmk/vim-sneak"
 
 function M.get()
 	return {
-		Sneak = { fg = C.overlay2, bg = C.pink },
-		SneakScope = { bg = C.text },
+		Sneak = { fg = C.bg3, bg = C.rose },
+		SneakScope = { bg = C.blush },
 	}
 end
 

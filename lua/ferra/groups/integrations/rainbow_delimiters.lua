@@ -1,16 +1,16 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/HiPhish/rainbow-delimiters.nvim"
 
 function M.get()
 	return {
-		RainbowDelimiterRed = { fg = C.red },
-		RainbowDelimiterYellow = { fg = C.yellow },
+		RainbowDelimiterRed = { fg = C.ember },
+		RainbowDelimiterYellow = { fg = C.honey },
 		RainbowDelimiterBlue = { fg = C.coral },
-		RainbowDelimiterOrange = { fg = C.peach },
-		RainbowDelimiterGreen = { fg = C.green },
+		RainbowDelimiterOrange = { fg = C.coral },
+		RainbowDelimiterGreen = { fg = C.sage },
 		RainbowDelimiterViolet = { fg = C.mauve },
-		RainbowDelimiterCyan = { fg = C.teal },
+		RainbowDelimiterCyan = { fg = C.sage },
 	}
 end
 

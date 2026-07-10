@@ -1,19 +1,19 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/nvimdev/dashboard-nvim"
 
 function M.get()
 	return {
-		DashboardShortCut = { fg = C.pink },
+		DashboardShortCut = { fg = C.rose },
 		DashboardHeader = { fg = C.coral },
-		DashboardCenter = { fg = C.green },
-		DashboardFooter = { fg = C.yellow, style = { "italic" } },
-		DashboardMruTitle = { fg = C.sky },
-		DashboardProjectTitle = { fg = C.sky },
-		DashboardFiles = { fg = C.lavender },
-		DashboardKey = { fg = C.peach },
+		DashboardCenter = { fg = C.sage },
+		DashboardFooter = { fg = C.honey, style = { "italic" } },
+		DashboardMruTitle = { fg = C.mist },
+		DashboardProjectTitle = { fg = C.mist },
+		DashboardFiles = { fg = C.rose },
+		DashboardKey = { fg = C.coral },
 		DashboardDesc = { fg = C.coral },
-		DashboardIcon = { fg = C.pink, bold = true },
+		DashboardIcon = { fg = C.rose, bold = true },
 	}
 end
 

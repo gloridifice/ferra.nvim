@@ -1,4 +1,4 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/neoclide/coc.nvim"
 
@@ -7,12 +7,12 @@ function M.get()
 		-- These groups are for the coc.nvim, see ":h coc-highlights"
 		-- Custom popup menu since coc v0.0.82
 		CocMenuSel = { link = "PmenuSel" },
-		CocPumSearch = { fg = C.sky, style = { "bold" } },
+		CocPumSearch = { fg = C.mist, style = { "bold" } },
 
 		-- Inlay hints
 		CocInlayHint = {
 			-- fg of `Comment`
-			fg = C.overlay0,
+			fg = C.bg3,
 			style = { "italic" },
 		},
 	}

@@ -1,19 +1,19 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/lukas-reineke/headlines.nvim"
 
 function M.get()
 	return {
-		Dash = { fg = C.overlay2, style = { "bold" } },
+		Dash = { fg = C.bg3, style = { "bold" } },
 		Quote = { link = "@markup.strong" },
-		CodeBlock = { bg = C.mantle },
+		CodeBlock = { bg = C.bg1 },
 		Headline = { link = "Headline1" },
-		Headline1 = { bg = C.surface0, fg = C.red },
-		Headline2 = { bg = C.surface0, fg = C.peach },
-		Headline3 = { bg = C.surface0, fg = C.yellow },
-		Headline4 = { bg = C.surface0, fg = C.green },
-		Headline5 = { bg = C.surface0, fg = C.sapphire },
-		Headline6 = { bg = C.surface0, fg = C.lavender },
+		Headline1 = { bg = C.bg1, fg = C.ember },
+		Headline2 = { bg = C.bg1, fg = C.coral },
+		Headline3 = { bg = C.bg1, fg = C.honey },
+		Headline4 = { bg = C.bg1, fg = C.sage },
+		Headline5 = { bg = C.bg1, fg = C.mist },
+		Headline6 = { bg = C.bg1, fg = C.rose },
 	}
 end
 

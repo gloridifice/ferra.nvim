@@ -1,15 +1,15 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/NeogitOrg/neogit"
 
 function M.get()
 	return {
 		NeogitBranch = {
-			fg = C.peach,
+			fg = C.coral,
 			style = { "bold" },
 		},
 		NeogitRemote = {
-			fg = C.green,
+			fg = C.sage,
 			style = { "bold" },
 		},
 		NeogitUnmergedInto = {
@@ -28,54 +28,54 @@ function M.get()
 			link = "Comment",
 		},
 		NeogitHunkHeader = {
-			bg = U.darken(C.coral, 0.095, C.base),
-			fg = U.darken(C.coral, 0.5, C.base),
+			bg = U.darken(C.coral, 0.095, C.bgbase),
+			fg = U.darken(C.coral, 0.5, C.bgbase),
 		},
 		NeogitHunkHeaderHighlight = {
-			bg = U.darken(C.coral, 0.215, C.base),
+			bg = U.darken(C.coral, 0.215, C.bgbase),
 			fg = C.coral,
 		},
 		NeogitDiffContextHighlight = {
-			bg = C.surface0,
+			bg = C.bg1,
 		},
 		NeogitDiffDeleteHighlight = {
-			bg = U.darken(C.red, 0.345, C.base),
-			fg = U.lighten(C.red, 0.850, C.text),
+			bg = U.darken(C.ember, 0.345, C.bgbase),
+			fg = U.lighten(C.ember, 0.850, C.blush),
 		},
 		NeogitDiffAddHighlight = {
-			bg = U.darken(C.green, 0.345, C.base),
-			fg = U.lighten(C.green, 0.850, C.text),
+			bg = U.darken(C.sage, 0.345, C.bgbase),
+			fg = U.lighten(C.sage, 0.850, C.blush),
 		},
 		NeogitDiffDelete = {
-			bg = U.darken(C.red, 0.095, C.base),
-			fg = U.darken(C.red, 0.800, C.base),
+			bg = U.darken(C.ember, 0.095, C.bgbase),
+			fg = U.darken(C.ember, 0.800, C.bgbase),
 		},
 		NeogitDiffDeleteInline = {
-			bg = U.darken(C.red, 0.500, C.base),
+			bg = U.darken(C.ember, 0.500, C.bgbase),
 			style = { "bold" },
 		},
 		NeogitDiffAdd = {
-			bg = U.darken(C.green, 0.095, C.base),
-			fg = U.darken(C.green, 0.800, C.base),
+			bg = U.darken(C.sage, 0.095, C.bgbase),
+			fg = U.darken(C.sage, 0.800, C.bgbase),
 		},
 		NeogitDiffAddInline = {
-			bg = U.darken(C.green, 0.500, C.base),
+			bg = U.darken(C.sage, 0.500, C.bgbase),
 			style = { "bold" },
 		},
 		NeogitCommitViewHeader = {
-			bg = U.darken(C.coral, 0.300, C.base),
-			fg = U.lighten(C.coral, 0.800, C.text),
+			bg = U.darken(C.coral, 0.300, C.bgbase),
+			fg = U.lighten(C.coral, 0.800, C.blush),
 		},
 		NeogitChangeModified = {
 			fg = C.coral,
 			style = { "bold" },
 		},
 		NeogitChangeDeleted = {
-			fg = C.red,
+			fg = C.ember,
 			style = { "bold" },
 		},
 		NeogitChangeAdded = {
-			fg = C.green,
+			fg = C.sage,
 			style = { "bold" },
 		},
 		NeogitChangeRenamed = {
@@ -83,19 +83,19 @@ function M.get()
 			style = { "bold" },
 		},
 		NeogitChangeUpdated = {
-			fg = C.peach,
+			fg = C.coral,
 			style = { "bold" },
 		},
 		NeogitChangeCopied = {
-			fg = C.pink,
+			fg = C.rose,
 			style = { "bold" },
 		},
 		NeogitChangeBothModified = {
-			fg = C.yellow,
+			fg = C.honey,
 			style = { "bold" },
 		},
 		NeogitChangeNewFile = {
-			fg = C.green,
+			fg = C.sage,
 			style = { "bold" },
 		},
 		NeogitUntrackedfiles = {
@@ -134,22 +134,22 @@ function M.get()
 			fg = C.coral,
 		},
 		NeogitNotificationWarning = {
-			fg = C.yellow,
+			fg = C.honey,
 		},
 		NeogitNotificationError = {
-			fg = C.red,
+			fg = C.ember,
 		},
 		NeogitGraphRed = {
-			fg = C.red,
+			fg = C.ember,
 		},
 		NeogitGraphWhite = {
-			fg = C.base,
+			fg = C.bgbase,
 		},
 		NeogitGraphYellow = {
-			fg = C.yellow,
+			fg = C.honey,
 		},
 		NeogitGraphGreen = {
-			fg = C.green,
+			fg = C.sage,
 		},
 		NeogitGraphCyan = {
 			fg = C.coral,
@@ -158,16 +158,16 @@ function M.get()
 			fg = C.coral,
 		},
 		NeogitGraphPurple = {
-			fg = C.lavender,
+			fg = C.rose,
 		},
 		NeogitGraphGray = {
-			fg = C.subtext1,
+			fg = C.blush,
 		},
 		NeogitGraphOrange = {
-			fg = C.peach,
+			fg = C.coral,
 		},
 		NeogitGraphBoldRed = {
-			fg = C.red,
+			fg = C.ember,
 			style = { "bold" },
 		},
 		NeogitGraphBoldWhite = {
@@ -175,11 +175,11 @@ function M.get()
 			style = { "bold" },
 		},
 		NeogitGraphBoldYellow = {
-			fg = C.yellow,
+			fg = C.honey,
 			style = { "bold" },
 		},
 		NeogitGraphBoldGreen = {
-			fg = C.green,
+			fg = C.sage,
 			style = { "bold" },
 		},
 		NeogitGraphBoldCyan = {
@@ -191,47 +191,47 @@ function M.get()
 			style = { "bold" },
 		},
 		NeogitGraphBoldPurple = {
-			fg = C.lavender,
+			fg = C.rose,
 			style = { "bold" },
 		},
 		NeogitGraphBoldGray = {
-			fg = C.subtext1,
+			fg = C.blush,
 			style = { "bold" },
 		},
 		NeogitDiffContext = {
-			bg = C.base,
+			bg = C.bgbase,
 		},
 		NeogitPopupBold = {
 			style = { "bold" },
 		},
 		NeogitPopupSwitchKey = {
-			fg = C.lavender,
+			fg = C.rose,
 		},
 		NeogitPopupOptionKey = {
-			fg = C.lavender,
+			fg = C.rose,
 		},
 		NeogitPopupConfigKey = {
-			fg = C.lavender,
+			fg = C.rose,
 		},
 		NeogitPopupActionKey = {
-			fg = C.lavender,
+			fg = C.rose,
 		},
 		NeogitFilePath = {
 			fg = C.coral,
 			style = { "italic" },
 		},
 		NeogitDiffHeader = {
-			bg = C.base,
+			bg = C.bgbase,
 			fg = C.coral,
 			style = { "bold" },
 		},
 		NeogitDiffHeaderHighlight = {
-			bg = C.base,
-			fg = C.peach,
+			bg = C.bgbase,
+			fg = C.coral,
 			style = { "bold" },
 		},
 		NeogitUnpushedTo = {
-			fg = C.lavender,
+			fg = C.rose,
 			style = { "bold" },
 		},
 		NeogitFold = {
@@ -243,7 +243,7 @@ function M.get()
 			style = { "bold" },
 		},
 		NeogitTagName = {
-			fg = C.yellow,
+			fg = C.honey,
 		},
 		NeogitTagDistance = {
 			fg = C.coral,

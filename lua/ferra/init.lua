@@ -100,11 +100,11 @@ local M = {
 			},
 			colorful_winsep = {
 				enabled = false,
-				color = "red",
+				color = "ember",
 			},
 			mini = {
 				enabled = true,
-				indentscope_color = "overlay2",
+				indentscope_color = "overlay",
 			},
 			lir = {
 				enabled = false,

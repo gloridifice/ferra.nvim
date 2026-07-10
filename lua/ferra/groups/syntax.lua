@@ -1,44 +1,44 @@
 local M = {}
 
 function M.get()
-	local diff_add = { bg = U.darken(C.green, 0.18, C.base) }
-	local diff_change = { bg = U.darken(C.coral, 0.07, C.base) }
-	local diff_delete = { bg = U.darken(C.red, 0.18, C.base) }
-	local diff_text = { bg = U.darken(C.coral, 0.30, C.base) }
+	local diff_add = { bg = U.darken(C.sage, 0.18, C.bgbase) }
+	local diff_change = { bg = U.darken(C.coral, 0.07, C.bgbase) }
+	local diff_delete = { bg = U.darken(C.ember, 0.18, C.bgbase) }
+	local diff_text = { bg = U.darken(C.coral, 0.30, C.bgbase) }
 
 	return {
-		Comment = { fg = C.overlay2, style = O.styles.comments }, -- just comments
+		Comment = { fg = C.bg3, style = O.styles.comments }, -- just comments
 		SpecialComment = { link = "Special" }, -- special things inside a comment
-		Constant = { fg = C.peach }, -- (preferred) any constant
-		String = { fg = C.green, style = O.styles.strings or {} }, -- a string constant: "this is a string"
-		Character = { fg = C.teal }, --  a character constant: 'c', '\n'
-		Number = { fg = C.peach, style = O.styles.numbers or {} }, --   a number constant: 234, 0xff
+		Constant = { fg = C.coral }, -- (preferred) any constant
+		String = { fg = C.sage, style = O.styles.strings or {} }, -- a string constant: "this is a string"
+		Character = { fg = C.sage }, --  a character constant: 'c', '\n'
+		Number = { fg = C.coral, style = O.styles.numbers or {} }, --   a number constant: 234, 0xff
 		Float = { link = "Number" }, --    a floating point constant: 2.3e10
-		Boolean = { fg = C.peach, style = O.styles.booleans or {} }, --  a boolean constant: TRUE, false
-		Identifier = { fg = C.text, style = O.styles.variables or {} }, -- (preferred) any variable name
+		Boolean = { fg = C.coral, style = O.styles.booleans or {} }, --  a boolean constant: TRUE, false
+		Identifier = { fg = C.blush, style = O.styles.variables or {} }, -- (preferred) any variable name
 		Function = { fg = C.coral, style = O.styles.functions or {} }, -- function name (also: methods for classes)
 		Statement = { fg = C.mauve }, -- (preferred) any statement
 		Conditional = { fg = C.mauve, style = O.styles.conditionals or {} }, --  if, then, else, endif, switch, etc.
 		Repeat = { fg = C.mauve, style = O.styles.loops or {} }, --   for, do, while, etc.
-		Label = { fg = C.sapphire }, --    case, default, etc.
-		Operator = { fg = C.sky, style = O.styles.operators or {} }, -- "sizeof", "+", "*", etc.
+		Label = { fg = C.mist }, --    case, default, etc.
+		Operator = { fg = C.mist, style = O.styles.operators or {} }, -- "sizeof", "+", "*", etc.
 		Keyword = { fg = C.mauve, style = O.styles.keywords or {} }, --  any other keyword
 		Exception = { fg = C.mauve, style = O.styles.keywords or {} }, --  try, catch, throw
 
-		PreProc = { fg = C.pink }, -- (preferred) generic Preprocessor
+		PreProc = { fg = C.rose }, -- (preferred) generic Preprocessor
 		Include = { fg = C.mauve, style = O.styles.keywords or {} }, --  preprocessor #include
 		Define = { link = "PreProc" }, -- preprocessor #define
 		Macro = { fg = C.mauve }, -- same as Define
 		PreCondit = { link = "PreProc" }, -- preprocessor #if, #else, #endif, etc.
 
-		StorageClass = { fg = C.pink }, -- static, register, volatile, etc.
-		Structure = { fg = C.pink }, --  struct, union, enum, etc.
-		Special = { fg = C.pink }, -- (preferred) any special symbol
-		Type = { fg = C.pink, style = O.styles.types or {} }, -- (preferred) int, long, char, etc.
+		StorageClass = { fg = C.rose }, -- static, register, volatile, etc.
+		Structure = { fg = C.rose }, --  struct, union, enum, etc.
+		Special = { fg = C.rose }, -- (preferred) any special symbol
+		Type = { fg = C.rose, style = O.styles.types or {} }, -- (preferred) int, long, char, etc.
 		Typedef = { link = "Type" }, --  A typedef
 		SpecialChar = { link = "Special" }, -- special character in a constant
-		Tag = { fg = C.lavender, style = { "bold" } }, -- you can use CTRL-] on this
-		Delimiter = { fg = O.weaken_delimiters and C.overlay2 or C.text }, -- character that needs attention
+		Tag = { fg = C.rose, style = { "bold" } }, -- you can use CTRL-] on this
+		Delimiter = { fg = O.weaken_delimiters and C.bg3 or C.blush }, -- character that needs attention
 		Debug = { link = "Special" }, -- debugging statements
 
 		Underlined = { style = { "underline" } }, -- (preferred) text that stands out, HTML links
@@ -47,44 +47,44 @@ function M.get()
 		-- ("Ignore", below, may be invisible...)
 		-- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
-		Error = { fg = C.red }, -- (preferred) any erroneous construct
-		Todo = { bg = C.flamingo, fg = C.base, style = { "bold" } }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-		qfLineNr = { fg = C.yellow },
+		Error = { fg = C.ember }, -- (preferred) any erroneous construct
+		Todo = { bg = C.coral, fg = C.bgbase, style = { "bold" } }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+		qfLineNr = { fg = C.honey },
 		qfFileName = { fg = C.coral },
-		htmlH1 = { fg = C.pink, style = { "bold" } },
+		htmlH1 = { fg = C.rose, style = { "bold" } },
 		htmlH2 = { fg = C.coral, style = { "bold" } },
-		-- mkdHeading = { fg = C.peach, style = { "bold" } },
-		-- mkdCode = { bg = C.terminal_black, fg = C.text },
-		mkdCodeDelimiter = { bg = C.base, fg = C.text },
-		mkdCodeStart = { fg = C.flamingo, style = { "bold" } },
-		mkdCodeEnd = { fg = C.flamingo, style = { "bold" } },
+		-- mkdHeading = { fg = C.coral, style = { "bold" } },
+		-- mkdCode = { bg = C.terminal_black, fg = C.blush },
+		mkdCodeDelimiter = { bg = C.bgbase, fg = C.blush },
+		mkdCodeStart = { fg = C.coral, style = { "bold" } },
+		mkdCodeEnd = { fg = C.coral, style = { "bold" } },
 		-- mkdLink = { fg = C.coral, style = { "underline" } },
 
 		-- debugging
-		debugPC = { bg = O.transparent_background and C.none or C.crust }, -- used for highlighting the current line in terminal-debug
-		debugBreakpoint = { bg = C.base, fg = C.overlay0 }, -- used for breakpoint colors in terminal-debug
+		debugPC = { bg = O.transparent_background and C.none or C.bgbase }, -- used for highlighting the current line in terminal-debug
+		debugBreakpoint = { bg = C.bgbase, fg = C.bg3 }, -- used for breakpoint colors in terminal-debug
 		-- illuminate
-		illuminatedWord = { bg = C.surface1 },
-		illuminatedCurWord = { bg = C.surface1 },
+		illuminatedWord = { bg = C.bg2 },
+		illuminatedCurWord = { bg = C.bg2 },
 		-- diff
-		Added = { fg = C.green },
+		Added = { fg = C.sage },
 		Changed = { fg = C.coral },
-		diffAdded = { fg = C.green },
-		diffRemoved = { fg = C.red },
+		diffAdded = { fg = C.sage },
+		diffRemoved = { fg = C.ember },
 		diffChanged = { fg = C.coral },
-		diffOldFile = { fg = C.yellow },
-		diffNewFile = { fg = C.peach },
+		diffOldFile = { fg = C.honey },
+		diffNewFile = { fg = C.coral },
 		diffFile = { fg = C.coral },
-		diffLine = { fg = C.overlay0 },
-		diffIndexLine = { fg = C.teal },
+		diffLine = { fg = C.bg3 },
+		diffIndexLine = { fg = C.sage },
 		DiffAdd = diff_add, -- diff mode: Added line |diff.txt|
 		DiffChange = diff_change, -- diff mode: Changed line |diff.txt|
 		DiffDelete = diff_delete, -- diff mode: Deleted line |diff.txt|
 		DiffText = diff_text, -- diff mode: Changed text within a changed line |diff.txt|
 
-		DiffviewWinSeparator = { fg = C.overlay0 },
+		DiffviewWinSeparator = { fg = C.bg3 },
 		DiffviewDiffDelete = diff_delete,
-		DiffviewFilePanelSelected = { fg = C.text },
+		DiffviewFilePanelSelected = { fg = C.blush },
 
 		DiffviewStatusAdded = diff_add,
 		DiffviewStatusUntracked = diff_change,
@@ -94,43 +94,43 @@ function M.get()
 		DiffviewStatusIgnored = diff_text,
 
 		-- NeoVim
-		healthError = { fg = C.red },
-		healthSuccess = { fg = C.teal },
-		healthWarning = { fg = C.yellow },
+		healthError = { fg = C.ember },
+		healthSuccess = { fg = C.sage },
+		healthWarning = { fg = C.honey },
 		-- misc
 
 		-- glyphs
-		GlyphPalette1 = { fg = C.red },
-		GlyphPalette2 = { fg = C.teal },
-		GlyphPalette3 = { fg = C.yellow },
+		GlyphPalette1 = { fg = C.ember },
+		GlyphPalette2 = { fg = C.sage },
+		GlyphPalette3 = { fg = C.honey },
 		GlyphPalette4 = { fg = C.coral },
-		GlyphPalette6 = { fg = C.teal },
-		GlyphPalette7 = { fg = C.text },
-		GlyphPalette9 = { fg = C.red },
+		GlyphPalette6 = { fg = C.sage },
+		GlyphPalette7 = { fg = C.blush },
+		GlyphPalette9 = { fg = C.ember },
 
 		-- rainbow
-		rainbow1 = { fg = C.red },
-		rainbow2 = { fg = C.peach },
-		rainbow3 = { fg = C.yellow },
-		rainbow4 = { fg = C.green },
-		rainbow5 = { fg = C.sapphire },
-		rainbow6 = { fg = C.lavender },
+		rainbow1 = { fg = C.ember },
+		rainbow2 = { fg = C.coral },
+		rainbow3 = { fg = C.honey },
+		rainbow4 = { fg = C.sage },
+		rainbow5 = { fg = C.mist },
+		rainbow6 = { fg = C.rose },
 
 		-- csv
-		csvCol0 = { fg = C.red },
-		csvCol1 = { fg = C.peach },
-		csvCol2 = { fg = C.yellow },
-		csvCol3 = { fg = C.green },
-		csvCol4 = { fg = C.sky },
+		csvCol0 = { fg = C.ember },
+		csvCol1 = { fg = C.coral },
+		csvCol2 = { fg = C.honey },
+		csvCol3 = { fg = C.sage },
+		csvCol4 = { fg = C.mist },
 		csvCol5 = { fg = C.coral },
-		csvCol6 = { fg = C.lavender },
+		csvCol6 = { fg = C.rose },
 		csvCol7 = { fg = C.mauve },
-		csvCol8 = { fg = C.pink },
+		csvCol8 = { fg = C.rose },
 
 		-- markdown
-		markdownHeadingDelimiter = { fg = C.peach, style = { "bold" } },
-		markdownCode = { fg = C.flamingo },
-		markdownCodeBlock = { fg = C.flamingo },
+		markdownHeadingDelimiter = { fg = C.coral, style = { "bold" } },
+		markdownCode = { fg = C.coral },
+		markdownCodeBlock = { fg = C.coral },
 		markdownLinkText = { fg = C.coral, style = { "underline" } },
 		markdownH1 = { link = "rainbow1" },
 		markdownH2 = { link = "rainbow2" },

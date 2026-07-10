@@ -1,4 +1,4 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/MeanderingProgrammer/render-markdown.nvim"
 
@@ -7,16 +7,16 @@ M.url = "https://github.com/MeanderingProgrammer/render-markdown.nvim"
 
 function M.get()
 	local groups = {
-		RenderMarkdownCode = { bg = C.mantle },
-		RenderMarkdownCodeInline = { bg = C.surface0 },
-		RenderMarkdownBullet = { fg = C.sky },
+		RenderMarkdownCode = { bg = C.bg1 },
+		RenderMarkdownCodeInline = { bg = C.bg1 },
+		RenderMarkdownBullet = { fg = C.mist },
 		RenderMarkdownTableHead = { fg = C.coral },
-		RenderMarkdownTableRow = { fg = C.lavender },
-		RenderMarkdownSuccess = { fg = C.green },
-		RenderMarkdownInfo = { fg = C.sky },
-		RenderMarkdownHint = { fg = C.teal },
-		RenderMarkdownWarn = { fg = C.yellow },
-		RenderMarkdownError = { fg = C.red },
+		RenderMarkdownTableRow = { fg = C.rose },
+		RenderMarkdownSuccess = { fg = C.sage },
+		RenderMarkdownInfo = { fg = C.mist },
+		RenderMarkdownHint = { fg = C.sage },
+		RenderMarkdownWarn = { fg = C.honey },
+		RenderMarkdownError = { fg = C.ember },
 	}
 
 	local syntax = require("ferra.groups.syntax").get()
@@ -25,7 +25,7 @@ function M.get()
 	for i = 1, 6 do
 		local color = syntax["rainbow" .. i].fg
 		groups["RenderMarkdownH" .. i] = { fg = color }
-		groups["RenderMarkdownH" .. i .. "Bg"] = { bg = U.darken(color, darkening_percentage, C.base) }
+		groups["RenderMarkdownH" .. i .. "Bg"] = { bg = U.darken(color, darkening_percentage, C.bgbase) }
 	end
 
 	return groups

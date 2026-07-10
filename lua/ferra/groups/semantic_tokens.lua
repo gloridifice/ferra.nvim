@@ -16,7 +16,7 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 		-- Most semantic tokens (@lsp.type.<...>) are no longer defined in this file, as Neovim links to already themed Tree-sitter captures by default.
 
 		-- lsp's are able to detect enum members where treesitter often cannot
-		["@lsp.type.enumMember"] = { fg = C.pink },
+		["@lsp.type.enumMember"] = { fg = C.rose },
 		-- we assume treesitter can already handle this
 		-- - treesitter can detect variables in buffers
 		-- - lsp does not need responsibility for this, in fact it can be less
@@ -27,7 +27,7 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 		-- allow lsp to override treesitter
 		["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
 		["@lsp.typemod.function.builtin"] = { link = "@function.builtin" },
-		["@lsp.mod.documentation.rust"] = { fg = C.green },
+		["@lsp.mod.documentation.rust"] = { fg = C.sage },
 	}
 end
 

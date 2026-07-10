@@ -1,4 +1,4 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/folke/snacks.nvim"
 
@@ -17,45 +17,45 @@ function M.get()
 		SnacksNotifierTitleInfo = { fg = C.coral, style = { "italic" } },
 		SnacksNotifierFooterInfo = { link = "DiagnosticInfo" },
 		SnacksNotifierBorderInfo = { fg = C.coral },
-		SnacksNotifierWarn = { fg = C.yellow },
-		SnacksNotifierIconWarn = { fg = C.yellow },
-		SnacksNotifierTitleWarn = { fg = C.yellow, style = { "italic" } },
-		SnacksNotifierBorderWarn = { fg = C.yellow },
+		SnacksNotifierWarn = { fg = C.honey },
+		SnacksNotifierIconWarn = { fg = C.honey },
+		SnacksNotifierTitleWarn = { fg = C.honey, style = { "italic" } },
+		SnacksNotifierBorderWarn = { fg = C.honey },
 		SnacksNotifierFooterWarn = { link = "DiagnosticWarn" },
-		SnacksNotifierDebug = { fg = C.peach },
-		SnacksNotifierIconDebug = { fg = C.peach },
-		SnacksNotifierTitleDebug = { fg = C.peach, style = { "italic" } },
-		SnacksNotifierBorderDebug = { fg = C.peach },
+		SnacksNotifierDebug = { fg = C.coral },
+		SnacksNotifierIconDebug = { fg = C.coral },
+		SnacksNotifierTitleDebug = { fg = C.coral, style = { "italic" } },
+		SnacksNotifierBorderDebug = { fg = C.coral },
 		SnacksNotifierFooterDebug = { link = "DiagnosticHint" },
-		SnacksNotifierError = { fg = C.red },
-		SnacksNotifierIconError = { fg = C.red },
-		SnacksNotifierTitleError = { fg = C.red, style = { "italic" } },
-		SnacksNotifierBorderError = { fg = C.red },
+		SnacksNotifierError = { fg = C.ember },
+		SnacksNotifierIconError = { fg = C.ember },
+		SnacksNotifierTitleError = { fg = C.ember, style = { "italic" } },
+		SnacksNotifierBorderError = { fg = C.ember },
 		SnacksNotifierFooterError = { link = "DiagnosticError" },
-		SnacksNotifierTrace = { fg = C.rosewater },
-		SnacksNotifierIconTrace = { fg = C.rosewater },
-		SnacksNotifierTitleTrace = { fg = C.rosewater, style = { "italic" } },
-		SnacksNotifierBorderTrace = { fg = C.rosewater },
+		SnacksNotifierTrace = { fg = C.blush },
+		SnacksNotifierIconTrace = { fg = C.blush },
+		SnacksNotifierTitleTrace = { fg = C.blush, style = { "italic" } },
+		SnacksNotifierBorderTrace = { fg = C.blush },
 		SnacksNotifierFooterTrace = { link = "DiagnosticHint" },
 
 		SnacksDashboardNormal = { link = "Normal" },
 		SnacksDashboardDesc = { fg = C.coral },
-		SnacksDashboardFile = { fg = C.lavender },
+		SnacksDashboardFile = { fg = C.rose },
 		SnacksDashboardDir = { link = "NonText" },
-		SnacksDashboardFooter = { fg = C.yellow, style = { "italic" } },
+		SnacksDashboardFooter = { fg = C.honey, style = { "italic" } },
 		SnacksDashboardHeader = { fg = C.coral },
-		SnacksDashboardIcon = { fg = C.pink, bold = true },
-		SnacksDashboardKey = { fg = C.peach },
+		SnacksDashboardIcon = { fg = C.rose, bold = true },
+		SnacksDashboardKey = { fg = C.coral },
 		SnacksDashboardTerminal = { link = "SnacksDashboardNormal" },
 		SnacksDashboardSpecial = { link = "Special" },
 		SnacksDashboardTitle = { link = "Title" },
 
-		SnacksIndent = { fg = C.surface0 },
-		SnacksIndentScope = { fg = C[indent_scope_color] or C.overlay2 },
+		SnacksIndent = { fg = C.bg1 },
+		SnacksIndentScope = { fg = C[indent_scope_color] or C.bg3 },
 
 		SnacksPickerSelected = {
-			fg = O.float.transparent and C.flamingo or C.text,
-			bg = O.float.transparent and C.none or C.surface0,
+			fg = O.float.transparent and C.coral or C.blush,
+			bg = O.float.transparent and C.none or C.bg1,
 			style = { "bold" },
 		},
 		SnacksPickerMatch = { fg = C.coral },
@@ -64,25 +64,25 @@ function M.get()
 		SnacksPickerBorder = { link = "FloatBorder" },
 		SnacksPickerInputBorder = { link = "SnacksPickerBorder" },
 		SnacksPickerInput = { link = "NormalFloat" },
-		SnacksPickerPrompt = { fg = C.flamingo },
+		SnacksPickerPrompt = { fg = C.coral },
 	}
 
 	if O.float.solid then
 		hlgroups["SnacksPickerTitle"] = {
-			fg = C.crust,
+			fg = C.bgbase,
 			bg = C.mauve,
 		}
 		hlgroups["SnacksPickerPreviewTitle"] = {
-			fg = C.crust,
-			bg = C.green,
+			fg = C.bgbase,
+			bg = C.sage,
 		}
 		hlgroups["SnacksPickerInputTitle"] = {
-			fg = C.crust,
-			bg = C.red,
+			fg = C.bgbase,
+			bg = C.ember,
 		}
 		hlgroups["SnacksPickerListTitle"] = {
-			fg = C.crust,
-			bg = C.lavender,
+			fg = C.bgbase,
+			bg = C.rose,
 		}
 	end
 

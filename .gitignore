@@ -10,3 +10,5 @@ Thumbs.db
 
 # Ferra compiled cache
 *.compile
+
+Session.vim

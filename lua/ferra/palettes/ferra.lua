@@ -1,28 +1,22 @@
+-- rosewater|text|subtext1 -> blush
+-- flamingo|peach -> coral
+-- pink|lavender -> rose
+-- sky|subtext0|sapphire -> mist
+-- green|teal -> sage
+-- red|maroon -> ember
+-- yellow -> honey
+
 return {
-	rosewater = "#fecdb2",
-	flamingo = "#ffa07a",
-	pink = "#F6B6C9",
+	blush = "#fecdb2", -- rosewater|text|subtext1
+	coral = "#ffa07a", -- flamingo|peach
+	rose = "#F6B6C9", -- pink|lavender
 	mauve = "#D1D1E0",
-	red = "#e06b75",
-	maroon = "#e06b75",
-	peach = "#ffa07a",
-	yellow = "#F5D76E",
-	green = "#B1B695",
-	teal = "#B1B695",
-	sky = "#D1D1E0",
-	sapphire = "#D1D1E0",
-	coral = "#ffa07a",
-	lavender = "#F6B6C9",
-	text = "#fecdb2",
-	subtext1 = "#fecdb2",
-	subtext0 = "#D1D1E0",
-	overlay2 = "#6F5D63",
-	overlay1 = "#6F5D63",
-	overlay0 = "#6F5D63",
-	surface2 = "#4d424b",
-	surface1 = "#4d424b",
-	surface0 = "#383539",
-	base = "#2b292d",
-	mantle = "#383539",
-	crust = "#2b292d",
+	ember = "#e06b75", -- red|maroon
+	honey = "#F5D76E", -- yellow
+	sage = "#B1B695", -- green|teal
+	mist = "#D1D1E0", -- sky|subtext0|sapphire
+	bg3 = "#6F5D63",
+	bg2 = "#4d424b",
+	bg1 = "#383539",
+	bgbase = "#2b292d",
 }

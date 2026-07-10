@@ -14,26 +14,26 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 
 	local colors = { -- Reference: https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md
 		-- Identifiers
-		["@variable"] = { fg = C.text, style = O.styles.variables or {} }, -- Any variable name that does not have another highlight.
-		["@variable.builtin"] = { fg = C.pink, style = O.styles.properties or {} }, -- Variable names that are defined by the languages, like this or self.
-		["@variable.parameter"] = { fg = C.text, style = O.styles.variables or {} }, -- For parameters of a function.
-		["@variable.member"] = { fg = C.text }, -- For fields.
+		["@variable"] = { fg = C.blush, style = O.styles.variables or {} }, -- Any variable name that does not have another highlight.
+		["@variable.builtin"] = { fg = C.rose, style = O.styles.properties or {} }, -- Variable names that are defined by the languages, like this or self.
+		["@variable.parameter"] = { fg = C.blush, style = O.styles.variables or {} }, -- For parameters of a function.
+		["@variable.member"] = { fg = C.blush }, -- For fields.
 
 		["@constant"] = { link = "Constant" }, -- For constants
-		["@constant.builtin"] = { fg = C.peach, style = O.styles.keywords or {} }, -- For constant that are built in the language: nil in Lua.
+		["@constant.builtin"] = { fg = C.coral, style = O.styles.keywords or {} }, -- For constant that are built in the language: nil in Lua.
 		["@constant.macro"] = { link = "Macro" }, -- For constants that are defined by macros: NULL in C.
 
-		["@module"] = { fg = C.text, style = O.styles.miscs or { "italic" } }, -- For identifiers referring to modules and namespaces.
+		["@module"] = { fg = C.blush, style = O.styles.miscs or { "italic" } }, -- For identifiers referring to modules and namespaces.
 		["@label"] = { link = "Label" }, -- For labels: label: in C and :label: in Lua.
 
 		-- Literals
 		["@string"] = { link = "String" }, -- For strings.
-		["@string.documentation"] = { fg = C.teal, style = O.styles.strings or {} }, -- For strings documenting code (e.g. Python docstrings).
-		["@string.regexp"] = { fg = C.pink, style = O.styles.strings or {} }, -- For regexes.
-		["@string.escape"] = { fg = C.pink, style = O.styles.strings or {} }, -- For escape characters within a string.
+		["@string.documentation"] = { fg = C.sage, style = O.styles.strings or {} }, -- For strings documenting code (e.g. Python docstrings).
+		["@string.regexp"] = { fg = C.rose, style = O.styles.strings or {} }, -- For regexes.
+		["@string.escape"] = { fg = C.rose, style = O.styles.strings or {} }, -- For escape characters within a string.
 		["@string.special"] = { link = "Special" }, -- other special strings (e.g. dates)
 		["@string.special.path"] = { link = "Special" }, -- filenames
-		["@string.special.symbol"] = { fg = C.flamingo }, -- symbols or atoms
+		["@string.special.symbol"] = { fg = C.coral }, -- symbols or atoms
 		["@string.special.url"] = { fg = C.coral, style = { "italic", "underline" } }, -- urls, links and emails
 		["@punctuation.delimiter.regex"] = { link = "@string.regexp" },
 
@@ -46,23 +46,23 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 
 		-- Types
 		["@type"] = { link = "Type" }, -- For types.
-		["@type.builtin"] = { fg = C.pink, style = O.styles.types or {} }, -- For builtin types.
+		["@type.builtin"] = { fg = C.rose, style = O.styles.types or {} }, -- For builtin types.
 		["@type.definition"] = { link = "Type" }, -- type definitions (e.g. `typedef` in C)
 
 		["@attribute"] = { link = "Constant" }, -- attribute annotations (e.g. Python decorators)
-		["@property"] = { fg = C.text, style = O.styles.properties or {} }, -- For fields, like accessing `bar` property on `foo.bar`. Overriden later for data languages and CSS.
+		["@property"] = { fg = C.blush, style = O.styles.properties or {} }, -- For fields, like accessing `bar` property on `foo.bar`. Overriden later for data languages and CSS.
 
 		-- Functions
 		["@function"] = { link = "Function" }, -- For function (calls and definitions).
-		["@function.builtin"] = { fg = C.peach, style = O.styles.functions or {} }, -- For builtin functions: table.insert in Lua.
+		["@function.builtin"] = { fg = C.coral, style = O.styles.functions or {} }, -- For builtin functions: table.insert in Lua.
 		["@function.call"] = { link = "Function" }, -- function calls
 		["@function.call.wgsl"] = { link = "Function", force = true }, -- function calls
-		["@function.macro"] = { fg = C.pink, style = O.styles.functions or {} }, -- For macro defined functions (calls and definitions): each macro_rules in Rust.
+		["@function.macro"] = { fg = C.rose, style = O.styles.functions or {} }, -- For macro defined functions (calls and definitions): each macro_rules in Rust.
 
 		["@function.method"] = { link = "Function" }, -- For method definitions.
 		["@function.method.call"] = { link = "Function" }, -- For method calls.
 
-		["@constructor"] = { fg = C.yellow }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
+		["@constructor"] = { fg = C.honey }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
 		["@operator"] = { link = "Operator" }, -- For any operator: +, but also -> and * in C.
 
 		-- Keywords
@@ -88,43 +88,43 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 
 		-- Punctuation
 		["@punctuation.delimiter"] = { link = "Delimiter" }, -- For delimiters (e.g. `;` / `.` / `,`).
-		["@punctuation.bracket"] = { fg = O.weaken_delimiters and C.overlay2 or C.text }, -- For brackets and parenthesis.
+		["@punctuation.bracket"] = { fg = O.weaken_delimiters and C.bg3 or C.blush }, -- For brackets and parenthesis.
 		["@punctuation.special"] = { link = "Special" }, -- For special punctuation that does not fall in the categories before (e.g. `{}` in string interpolation).
 
 		-- Comment
 		["@comment"] = { link = "Comment" },
-		["@comment.documentation"] = { fg = C.green }, -- For comments documenting code
+		["@comment.documentation"] = { fg = C.sage }, -- For comments documenting code
 
-		["@comment.error"] = { fg = C.base, bg = C.red },
-		["@comment.warning"] = { fg = C.base, bg = C.yellow },
-		["@comment.hint"] = { fg = C.base, bg = C.coral },
-		["@comment.todo"] = { fg = C.base, bg = C.flamingo },
-		["@comment.note"] = { fg = C.base, bg = C.rosewater },
+		["@comment.error"] = { fg = C.bgbase, bg = C.ember },
+		["@comment.warning"] = { fg = C.bgbase, bg = C.honey },
+		["@comment.hint"] = { fg = C.bgbase, bg = C.coral },
+		["@comment.todo"] = { fg = C.bgbase, bg = C.coral },
+		["@comment.note"] = { fg = C.bgbase, bg = C.blush },
 
 		-- Markup
-		["@markup"] = { fg = C.text }, -- For strings considerated text in a markup language.
-		["@markup.strong"] = { fg = C.red, style = { "bold" } }, -- bold
-		["@markup.italic"] = { fg = C.red, style = { "italic" } }, -- italic
-		["@markup.strikethrough"] = { fg = C.text, style = { "strikethrough" } }, -- strikethrough text
+		["@markup"] = { fg = C.blush }, -- For strings considerated text in a markup language.
+		["@markup.strong"] = { fg = C.ember, style = { "bold" } }, -- bold
+		["@markup.italic"] = { fg = C.ember, style = { "italic" } }, -- italic
+		["@markup.strikethrough"] = { fg = C.blush, style = { "strikethrough" } }, -- strikethrough text
 		["@markup.underline"] = { link = "Underlined" }, -- underlined text
 
 		["@markup.heading"] = { fg = C.coral }, -- titles like: # Example
 		["@markup.heading.markdown"] = { style = { "bold" } }, -- bold headings in markdown, but not in HTML or other markup
 
 		["@markup.math"] = { fg = C.coral }, -- math environments (e.g. `$ ... $` in LaTeX)
-		["@markup.quote"] = { fg = C.pink }, -- block quotes
-		["@markup.environment"] = { fg = C.pink }, -- text environments of markup languages
+		["@markup.quote"] = { fg = C.rose }, -- block quotes
+		["@markup.environment"] = { fg = C.rose }, -- text environments of markup languages
 		["@markup.environment.name"] = { fg = C.coral }, -- text indicating the type of an environment
 
-		["@markup.link"] = { fg = C.lavender }, -- text references, footnotes, citations, etc.
-		["@markup.link.label"] = { fg = C.lavender }, -- link, reference descriptions
+		["@markup.link"] = { fg = C.rose }, -- text references, footnotes, citations, etc.
+		["@markup.link.label"] = { fg = C.rose }, -- link, reference descriptions
 		["@markup.link.url"] = { fg = C.coral, style = { "italic", "underline" } }, -- urls, links and emails
 
-		["@markup.raw"] = { fg = C.green }, -- used for inline code in markdown and for doc in python (""")
+		["@markup.raw"] = { fg = C.sage }, -- used for inline code in markdown and for doc in python (""")
 
-		["@markup.list"] = { fg = C.teal },
-		["@markup.list.checked"] = { fg = C.green }, -- todo notes
-		["@markup.list.unchecked"] = { fg = C.overlay1 }, -- todo notes
+		["@markup.list"] = { fg = C.sage },
+		["@markup.list.checked"] = { fg = C.sage }, -- todo notes
+		["@markup.list.unchecked"] = { fg = C.bg3 }, -- todo notes
 
 		-- Diff
 		["@diff.plus"] = { link = "diffAdded" }, -- added text (for diff files)
@@ -132,10 +132,10 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 		["@diff.delta"] = { link = "diffChanged" }, -- deleted text (for diff files)
 
 		-- Tags
-		["@tag"] = { fg = C.sapphire }, -- Tags like HTML tag names.
+		["@tag"] = { fg = C.mist }, -- Tags like HTML tag names.
 		["@tag.builtin"] = { fg = C.coral }, -- JSX tag names.
 		["@tag.attribute"] = { fg = C.coral, style = O.styles.miscs or { "italic" } }, -- XML/HTML attributes (foo in foo="bar").
-		["@tag.delimiter"] = { fg = C.text }, -- Tag delimiter like < > /
+		["@tag.delimiter"] = { fg = C.blush }, -- Tag delimiter like < > /
 
 		-- Misc
 		["@error"] = { link = "Error" },
@@ -143,8 +143,8 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 		-- Language specific:
 
 		-- Bash
-		["@function.builtin.bash"] = { fg = C.red, style = O.styles.miscs or { "italic" } },
-		["@variable.parameter.bash"] = { fg = C.green },
+		["@function.builtin.bash"] = { fg = C.ember, style = O.styles.miscs or { "italic" } },
+		["@variable.parameter.bash"] = { fg = C.sage },
 
 		-- markdown
 		["@markup.heading.1.markdown"] = { link = "rainbow1" },
@@ -164,55 +164,55 @@ If you want to stay on nvim 0.7, pin ferra tag to v0.1.0 and nvim-treesitter com
 		["@markup.heading.6.html"] = { link = "@markup" },
 
 		-- Java
-		["@constant.java"] = { fg = C.teal },
+		["@constant.java"] = { fg = C.sage },
 
 		-- CSS
-		["@property.css"] = { fg = C.text },
-		["@property.scss"] = { fg = C.text },
-		["@property.id.css"] = { fg = C.text },
+		["@property.css"] = { fg = C.blush },
+		["@property.scss"] = { fg = C.blush },
+		["@property.id.css"] = { fg = C.blush },
 		["@property.class.css"] = { fg = C.coral },
-		["@type.css"] = { fg = C.lavender },
+		["@type.css"] = { fg = C.rose },
 		["@type.tag.css"] = { fg = C.coral },
-		["@string.plain.css"] = { fg = C.green },
-		["@number.css"] = { fg = C.peach },
+		["@string.plain.css"] = { fg = C.sage },
+		["@number.css"] = { fg = C.coral },
 		["@keyword.directive.css"] = { link = "Keyword" }, -- CSS at-rules: https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule.
 
 		-- HTML
-		["@string.special.url.html"] = { fg = C.green }, -- Links in href, src attributes.
-		["@markup.link.label.html"] = { fg = C.text }, -- Text between <a></a> tags.
-		["@character.special.html"] = { fg = C.red }, -- Symbols such as &nbsp;.
+		["@string.special.url.html"] = { fg = C.sage }, -- Links in href, src attributes.
+		["@markup.link.label.html"] = { fg = C.blush }, -- Text between <a></a> tags.
+		["@character.special.html"] = { fg = C.ember }, -- Symbols such as &nbsp;.
 
 		-- Lua
 		["@constructor.lua"] = { link = "@punctuation.bracket" }, -- For constructor calls and definitions: = { } in Lua.
 
 		-- Python
-		["@constructor.python"] = { fg = C.sky }, -- __init__(), __new__().
+		["@constructor.python"] = { fg = C.mist }, -- __init__(), __new__().
 
 		-- YAML
-		["@label.yaml"] = { fg = C.yellow }, -- Anchor and alias names.
+		["@label.yaml"] = { fg = C.honey }, -- Anchor and alias names.
 
 		-- Ruby
-		["@string.special.symbol.ruby"] = { fg = C.flamingo },
+		["@string.special.symbol.ruby"] = { fg = C.coral },
 
 		-- PHP
 		["@function.method.php"] = { link = "Function" },
 		["@function.method.call.php"] = { link = "Function" },
 
 		-- C/CPP
-		["@keyword.import.c"] = { fg = C.yellow },
-		["@keyword.import.cpp"] = { fg = C.yellow },
+		["@keyword.import.c"] = { fg = C.honey },
+		["@keyword.import.cpp"] = { fg = C.honey },
 
 		-- C#
-		["@attribute.c_sharp"] = { fg = C.yellow },
+		["@attribute.c_sharp"] = { fg = C.honey },
 
 		-- gitcommit
-		["@comment.warning.gitcommit"] = { fg = C.yellow },
+		["@comment.warning.gitcommit"] = { fg = C.honey },
 
 		-- gitignore
-		["@string.special.path.gitignore"] = { fg = C.text },
+		["@string.special.path.gitignore"] = { fg = C.blush },
 
 		-- Misc
-		gitcommitSummary = { fg = C.rosewater, style = O.styles.miscs or { "italic" } },
+		gitcommitSummary = { fg = C.blush, style = O.styles.miscs or { "italic" } },
 		zshKSHFunction = { link = "Function" },
 	}
 

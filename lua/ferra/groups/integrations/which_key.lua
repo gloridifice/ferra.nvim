@@ -1,4 +1,4 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/folke/which-key.nvim"
 
@@ -8,9 +8,9 @@ function M.get()
 		WhichKeyBorder = { link = "FloatBorder" },
 
 		WhichKeyGroup = { fg = C.coral },
-		WhichKeySeparator = { fg = C.overlay0 },
-		WhichKeyDesc = { fg = C.pink },
-		WhichKeyValue = { fg = C.overlay0 },
+		WhichKeySeparator = { fg = C.bg3 },
+		WhichKeyDesc = { fg = C.rose },
+		WhichKeyValue = { fg = C.bg3 },
 	}
 end
 

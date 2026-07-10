@@ -1,12 +1,12 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/mhinz/vim-signify"
 
 function M.get()
 	return {
-		SignifySignAdd = { fg = C.green },
-		SignifySignChange = { fg = C.yellow },
-		SignifySignDelete = { fg = C.red },
+		SignifySignAdd = { fg = C.sage },
+		SignifySignChange = { fg = C.honey },
+		SignifySignDelete = { fg = C.ember },
 	}
 end
 

@@ -1,4 +1,4 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/ibhagwan/fzf-lua"
 
@@ -7,20 +7,20 @@ function M.get()
 		FzfLuaNormal = { link = "NormalFloat" },
 		FzfLuaBorder = { link = "FloatBorder" },
 		FzfLuaTitle = { link = "FloatTitle" },
-		FzfLuaHeaderBind = { fg = C.yellow },
-		FzfLuaHeaderText = { fg = C.peach },
+		FzfLuaHeaderBind = { fg = C.honey },
+		FzfLuaHeaderText = { fg = C.coral },
 		FzfLuaDirPart = { link = "NonText" },
 		FzfLuaFzfMatch = { fg = C.coral },
 		FzfLuaFzfPrompt = { fg = C.coral },
 		FzfLuaPathColNr = { fg = C.coral },
-		FzfLuaPathLineNr = { fg = C.green },
+		FzfLuaPathLineNr = { fg = C.sage },
 		FzfLuaBufName = { fg = C.mauve },
-		FzfLuaBufNr = { fg = C.yellow },
-		FzfLuaBufFlagCur = { fg = C.peach },
+		FzfLuaBufNr = { fg = C.honey },
+		FzfLuaBufFlagCur = { fg = C.coral },
 		FzfLuaBufFlagAlt = { fg = C.coral },
-		FzfLuaTabTitle = { fg = C.sky },
-		FzfLuaTabMarker = { fg = C.yellow },
-		FzfLuaLiveSym = { fg = C.peach },
+		FzfLuaTabTitle = { fg = C.mist },
+		FzfLuaTabMarker = { fg = C.honey },
+		FzfLuaLiveSym = { fg = C.coral },
 	}
 end
 

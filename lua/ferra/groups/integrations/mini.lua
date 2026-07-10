@@ -4,9 +4,9 @@ M.url = "https://github.com/echasnovski/mini.nvim"
 
 function M.get()
 	local transparent_background = require("ferra").options.transparent_background
-	local bg_highlight = transparent_background and "NONE" or C.base
+	local bg_highlight = transparent_background and "NONE" or C.bgbase
 
-	local inactive_bg = transparent_background and "NONE" or C.mantle
+	local inactive_bg = transparent_background and "NONE" or C.bg1
 
 	local indentscope_color = O.integrations.mini.indentscope_color
 	return {
@@ -23,8 +23,8 @@ function M.get()
 
 		MiniCompletionActiveParameter = { style = { "underline" } },
 
-		MiniCursorword = { bg = C.surface0, style = { "bold" } },
-		MiniCursorwordCurrent = { bg = C.surface0, style = { "bold" } },
+		MiniCursorword = { bg = C.bg1, style = { "bold" } },
+		MiniCursorwordCurrent = { bg = C.bg1, style = { "bold" } },
 
 		MiniDepsChangeAdded = { link = "diffAdded" },
 		MiniDepsChangeRemoved = { link = "diffRemoved" },
@@ -33,13 +33,13 @@ function M.get()
 		MiniDepsMsgBreaking = { link = "DiagnosticWarn" },
 		MiniDepsPlaceholder = { link = "Comment" },
 		MiniDepsTitle = { link = "Title" },
-		MiniDepsTitleError = { bg = C.red, fg = C.base },
+		MiniDepsTitleError = { bg = C.ember, fg = C.bgbase },
 		MiniDepsTitleSame = { link = "DiffText" },
-		MiniDepsTitleUpdate = { bg = C.green, fg = C.base },
+		MiniDepsTitleUpdate = { bg = C.sage, fg = C.bgbase },
 
-		MiniDiffSignAdd = { fg = C.green },
-		MiniDiffSignChange = { fg = C.yellow },
-		MiniDiffSignDelete = { fg = C.red },
+		MiniDiffSignAdd = { fg = C.sage },
+		MiniDiffSignChange = { fg = C.honey },
+		MiniDiffSignDelete = { fg = C.ember },
 		MiniDiffOverAdd = { link = "DiffAdd" },
 		MiniDiffOverChange = { link = "DiffText" },
 		MiniDiffOverContext = { link = "DiffChange" },
@@ -49,41 +49,41 @@ function M.get()
 		MiniFilesBorderModified = { link = "DiagnosticFloatingWarn" },
 		MiniFilesCursorLine = { link = "CursorLine" },
 		MiniFilesDirectory = { link = "Directory" },
-		MiniFilesFile = { fg = C.text },
+		MiniFilesFile = { fg = C.blush },
 		MiniFilesNormal = { link = "NormalFloat" },
 		MiniFilesTitle = { link = "FloatTitle" },
 		MiniFilesTitleFocused = O.float.solid and {
-			fg = C.crust,
+			fg = C.bgbase,
 			bg = C.mauve,
 		} or {
-			fg = C.subtext0,
-			bg = (O.float.transparent and vim.o.winblend == 0) and C.none or C.mantle,
+			fg = C.mist,
+			bg = (O.float.transparent and vim.o.winblend == 0) and C.none or C.bg1,
 			style = { "bold" },
 		},
 
-		MiniHipatternsFixme = { fg = C.base, bg = C.red, style = { "bold" } },
-		MiniHipatternsHack = { fg = C.base, bg = C.yellow, style = { "bold" } },
-		MiniHipatternsNote = { fg = C.base, bg = C.sky, style = { "bold" } },
-		MiniHipatternsTodo = { fg = C.base, bg = C.teal, style = { "bold" } },
+		MiniHipatternsFixme = { fg = C.bgbase, bg = C.ember, style = { "bold" } },
+		MiniHipatternsHack = { fg = C.bgbase, bg = C.honey, style = { "bold" } },
+		MiniHipatternsNote = { fg = C.bgbase, bg = C.mist, style = { "bold" } },
+		MiniHipatternsTodo = { fg = C.bgbase, bg = C.sage, style = { "bold" } },
 
-		MiniIconsAzure = { fg = C.sapphire },
+		MiniIconsAzure = { fg = C.mist },
 		MiniIconsBlue = { fg = C.coral },
-		MiniIconsCyan = { fg = C.teal },
-		MiniIconsGreen = { fg = C.green },
-		MiniIconsGrey = { fg = C.text },
-		MiniIconsOrange = { fg = C.peach },
+		MiniIconsCyan = { fg = C.sage },
+		MiniIconsGreen = { fg = C.sage },
+		MiniIconsGrey = { fg = C.blush },
+		MiniIconsOrange = { fg = C.coral },
 		MiniIconsPurple = { fg = C.mauve },
-		MiniIconsRed = { fg = C.red },
-		MiniIconsYellow = { fg = C.yellow },
+		MiniIconsRed = { fg = C.ember },
+		MiniIconsYellow = { fg = C.honey },
 
-		MiniIndentscopeSymbol = { fg = C[indentscope_color] or C.overlay2 },
+		MiniIndentscopeSymbol = { fg = C[indentscope_color] or C.bg3 },
 
-		MiniJump = { fg = C.overlay2, bg = C.pink },
+		MiniJump = { fg = C.bg3, bg = C.rose },
 
-		MiniJump2dDim = { fg = C.overlay0 },
-		MiniJump2dSpot = { bg = C.base, fg = C.peach, style = { "bold", "underline" } },
-		MiniJump2dSpotAhead = { bg = C.dim, fg = C.teal },
-		MiniJump2dSpotUnique = { bg = C.base, fg = C.sky, style = { "bold" } },
+		MiniJump2dDim = { fg = C.bg3 },
+		MiniJump2dSpot = { bg = C.bgbase, fg = C.coral, style = { "bold", "underline" } },
+		MiniJump2dSpotAhead = { bg = C.dim, fg = C.sage },
+		MiniJump2dSpotUnique = { bg = C.bgbase, fg = C.mist, style = { "bold" } },
 
 		MiniMapNormal = { link = "NormalFloat" },
 		MiniMapSymbolCount = { link = "Special" },
@@ -99,15 +99,15 @@ function M.get()
 		MiniPickBorder = { link = "FloatBorder" },
 		MiniPickBorderBusy = { link = "DiagnosticFloatingWarn" },
 		MiniPickBorderText = O.float.solid and {
-			fg = C.crust,
+			fg = C.bgbase,
 			bg = C.mauve,
-		} or { fg = C.mauve, bg = (O.float.transparent and vim.o.winblend == 0) and C.none or C.mantle },
+		} or { fg = C.mauve, bg = (O.float.transparent and vim.o.winblend == 0) and C.none or C.bg1 },
 		MiniPickIconDirectory = { link = "Directory" },
 		MiniPickIconFile = { link = "MiniPickNormal" },
 		MiniPickHeader = { link = "DiagnosticFloatingHint" },
 		MiniPickMatchCurrent = {
-			fg = C.flamingo,
-			bg = C.surface0,
+			fg = C.coral,
+			bg = C.bg1,
 			style = { "bold" },
 		},
 		MiniPickMatchMarked = { link = "Visual" },
@@ -115,53 +115,53 @@ function M.get()
 		MiniPickNormal = { link = "NormalFloat" },
 		MiniPickPreviewLine = { link = "CursorLine" },
 		MiniPickPreviewRegion = { link = "IncSearch" },
-		MiniPickPrompt = { fg = C.text, bg = O.float.transparent and C.none or C.mantle },
+		MiniPickPrompt = { fg = C.blush, bg = O.float.transparent and C.none or C.bg1 },
 		MiniPickPromptCaret = {
-			fg = C.flamingo,
-			bg = O.float.transparent and C.none or C.mantle,
+			fg = C.coral,
+			bg = O.float.transparent and C.none or C.bg1,
 		},
 		MiniPickPromptPrefix = {
-			fg = C.flamingo,
-			bg = O.float.transparent and C.none or C.mantle,
+			fg = C.coral,
+			bg = O.float.transparent and C.none or C.bg1,
 		},
 
 		MiniStarterCurrent = {},
-		MiniStarterFooter = { fg = C.yellow, style = { "italic" } },
+		MiniStarterFooter = { fg = C.honey, style = { "italic" } },
 		MiniStarterHeader = { fg = C.coral },
-		MiniStarterInactive = { fg = C.surface2, style = O.styles.comments },
-		MiniStarterItem = { fg = C.text },
+		MiniStarterInactive = { fg = C.bg2, style = O.styles.comments },
+		MiniStarterItem = { fg = C.blush },
 		MiniStarterItemBullet = { fg = C.coral },
-		MiniStarterItemPrefix = { fg = C.pink },
-		MiniStarterSection = { fg = C.flamingo },
-		MiniStarterQuery = { fg = C.green },
+		MiniStarterItemPrefix = { fg = C.rose },
+		MiniStarterSection = { fg = C.coral },
+		MiniStarterQuery = { fg = C.sage },
 
-		MiniStatuslineDevinfo = { fg = C.subtext1, bg = C.surface1 },
-		MiniStatuslineFileinfo = { fg = C.subtext1, bg = C.surface1 },
-		MiniStatuslineFilename = { fg = C.text, bg = C.mantle },
-		MiniStatuslineInactive = { fg = C.coral, bg = C.mantle },
-		MiniStatuslineModeCommand = { fg = C.base, bg = C.peach, style = { "bold" } },
-		MiniStatuslineModeInsert = { fg = C.base, bg = C.green, style = { "bold" } },
-		MiniStatuslineModeNormal = { fg = C.mantle, bg = C.coral, style = { "bold" } },
-		MiniStatuslineModeOther = { fg = C.base, bg = C.teal, style = { "bold" } },
-		MiniStatuslineModeReplace = { fg = C.base, bg = C.red, style = { "bold" } },
-		MiniStatuslineModeVisual = { fg = C.base, bg = C.mauve, style = { "bold" } },
+		MiniStatuslineDevinfo = { fg = C.blush, bg = C.bg2 },
+		MiniStatuslineFileinfo = { fg = C.blush, bg = C.bg2 },
+		MiniStatuslineFilename = { fg = C.blush, bg = C.bg1 },
+		MiniStatuslineInactive = { fg = C.coral, bg = C.bg1 },
+		MiniStatuslineModeCommand = { fg = C.bgbase, bg = C.coral, style = { "bold" } },
+		MiniStatuslineModeInsert = { fg = C.bgbase, bg = C.sage, style = { "bold" } },
+		MiniStatuslineModeNormal = { fg = C.bg1, bg = C.coral, style = { "bold" } },
+		MiniStatuslineModeOther = { fg = C.bgbase, bg = C.sage, style = { "bold" } },
+		MiniStatuslineModeReplace = { fg = C.bgbase, bg = C.ember, style = { "bold" } },
+		MiniStatuslineModeVisual = { fg = C.bgbase, bg = C.mauve, style = { "bold" } },
 
-		MiniSurround = { bg = C.pink, fg = C.surface1 },
+		MiniSurround = { bg = C.rose, fg = C.bg2 },
 
-		MiniTablineCurrent = { fg = C.text, bg = C.none, sp = C.red, style = { "bold", "italic" } },
-		MiniTablineFill = { bg = C.base },
-		MiniTablineHidden = { fg = C.overlay2, bg = C.base },
-		MiniTablineModifiedCurrent = { fg = C.red, bg = inactive_bg, style = { "bold", "italic" } },
-		MiniTablineModifiedHidden = { fg = C.red, bg = C.base },
-		MiniTablineModifiedVisible = { fg = C.red, bg = C.base },
-		MiniTablineTabpagesection = { fg = C.surface1, bg = C.base },
-		MiniTablineVisible = { fg = C.overlay2, bg = C.base },
+		MiniTablineCurrent = { fg = C.blush, bg = C.none, sp = C.ember, style = { "bold", "italic" } },
+		MiniTablineFill = { bg = C.bgbase },
+		MiniTablineHidden = { fg = C.bg3, bg = C.bgbase },
+		MiniTablineModifiedCurrent = { fg = C.ember, bg = inactive_bg, style = { "bold", "italic" } },
+		MiniTablineModifiedHidden = { fg = C.ember, bg = C.bgbase },
+		MiniTablineModifiedVisible = { fg = C.ember, bg = C.bgbase },
+		MiniTablineTabpagesection = { fg = C.bg2, bg = C.bgbase },
+		MiniTablineVisible = { fg = C.bg3, bg = C.bgbase },
 
 		MiniTestEmphasis = { style = { "bold" } },
-		MiniTestFail = { fg = C.red, style = { "bold" } },
-		MiniTestPass = { fg = C.green, style = { "bold" } },
+		MiniTestFail = { fg = C.ember, style = { "bold" } },
+		MiniTestPass = { fg = C.sage, style = { "bold" } },
 
-		MiniTrailspace = { bg = C.red },
+		MiniTrailspace = { bg = C.ember },
 	}
 end
 

@@ -1,4 +1,4 @@
-﻿local M = {}
+local M = {}
 
 function M.apply(flavour)
 	flavour = flavour or require("ferra").flavour
@@ -12,9 +12,8 @@ function M.apply(flavour)
 
 	local dim_percentage = O.dim_inactive.percentage
 	C.dim = O.dim_inactive.shade == "dark"
-			and U.darken(C.base, dim_percentage, C.mantle)
-			or U.lighten(C.surface0, dim_percentage, C.base)
-
+			and U.darken(C.bgbase, dim_percentage, C.bg1)
+			or U.lighten(C.bg1, dim_percentage, C.bgbase)
 	local theme = {}
 	theme.editor =
 		vim.tbl_deep_extend("force", require("ferra.groups.editor").get(), require("ferra.groups.lsp").get())

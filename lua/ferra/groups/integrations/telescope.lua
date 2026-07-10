@@ -1,4 +1,4 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/nvim-telescope/telescope.nvim"
 
@@ -10,28 +10,28 @@ function M.get()
 		TelescopePromptNormal = { link = "TelescopeNormal" },
 		TelescopeResultsNormal = { link = "TelescopeNormal" },
 		TelescopeTitle = { link = "FloatTitle" },
-		TelescopeSelectionCaret = { fg = C.flamingo, bg = C.surface0 },
+		TelescopeSelectionCaret = { fg = C.coral, bg = C.bg1 },
 		TelescopeSelection = {
-			fg = C.flamingo,
-			bg = C.surface0,
+			fg = C.coral,
+			bg = C.bg1,
 			style = { "bold" },
 		},
 		TelescopeMatching = { fg = C.coral },
-		TelescopePromptPrefix = { fg = C.flamingo },
+		TelescopePromptPrefix = { fg = C.coral },
 	}
 
 	if O.float.solid then
 		hlgroups["TelescopePreviewTitle"] = {
-			fg = C.crust,
-			bg = C.green,
+			fg = C.bgbase,
+			bg = C.sage,
 		}
 		hlgroups["TelescopePromptTitle"] = {
-			fg = C.crust,
-			bg = C.red,
+			fg = C.bgbase,
+			bg = C.ember,
 		}
 		hlgroups["TelescopeResultsTitle"] = {
-			fg = C.crust,
-			bg = C.lavender,
+			fg = C.bgbase,
+			bg = C.rose,
 		}
 	end
 

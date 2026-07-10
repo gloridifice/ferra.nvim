@@ -1,4 +1,4 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/lewis6991/gitsigns.nvim"
 
@@ -9,36 +9,36 @@ function M.get()
 
 	if transparent then
 		return {
-			GitSignsAdd = { fg = C.green }, -- diff mode: Added line |diff.txt|
-			GitSignsChange = { fg = C.yellow }, -- diff mode: Changed line |diff.txt|
-			GitSignsDelete = { fg = C.red }, -- diff mode: Deleted line |diff.txt|
+			GitSignsAdd = { fg = C.sage }, -- diff mode: Added line |diff.txt|
+			GitSignsChange = { fg = C.honey }, -- diff mode: Changed line |diff.txt|
+			GitSignsDelete = { fg = C.ember }, -- diff mode: Deleted line |diff.txt|
 
-			GitSignsCurrentLineBlame = { fg = C.surface1 },
+			GitSignsCurrentLineBlame = { fg = C.bg2 },
 
-			GitSignsAddPreview = { fg = C.green, bg = C.none },
-			GitSignsDeletePreview = { fg = C.red, bg = C.none },
+			GitSignsAddPreview = { fg = C.sage, bg = C.none },
+			GitSignsDeletePreview = { fg = C.ember, bg = C.none },
 
 			-- for word diff in previews
-			GitSignsAddInline = { fg = C.base, bg = C.green, style = { "bold" } },
-			GitSignsDeleteInline = { fg = C.base, bg = C.red, style = { "bold" } },
-			GitSignsChangeInline = { fg = C.base, bg = C.coral, style = { "bold" } },
+			GitSignsAddInline = { fg = C.bgbase, bg = C.sage, style = { "bold" } },
+			GitSignsDeleteInline = { fg = C.bgbase, bg = C.ember, style = { "bold" } },
+			GitSignsChangeInline = { fg = C.bgbase, bg = C.coral, style = { "bold" } },
 
-			GitSignsDeleteVirtLn = { bg = C.none, fg = C.red },
+			GitSignsDeleteVirtLn = { bg = C.none, fg = C.ember },
 		}
 	else
 		return {
-			GitSignsAdd = { fg = C.green }, -- diff mode: Added line |diff.txt|
-			GitSignsChange = { fg = C.yellow }, -- diff mode: Changed line |diff.txt|
-			GitSignsDelete = { fg = C.red }, -- diff mode: Deleted line |diff.txt|
+			GitSignsAdd = { fg = C.sage }, -- diff mode: Added line |diff.txt|
+			GitSignsChange = { fg = C.honey }, -- diff mode: Changed line |diff.txt|
+			GitSignsDelete = { fg = C.ember }, -- diff mode: Deleted line |diff.txt|
 
-			GitSignsCurrentLineBlame = { fg = C.surface1 },
+			GitSignsCurrentLineBlame = { fg = C.bg2 },
 
 			GitSignsAddPreview = { link = "DiffAdd" },
 			GitSignsDeletePreview = { link = "DiffDelete" },
 
-			GitSignsAddInline = { bg = U.darken(C.green, 0.36, C.base) },
-			GitSignsChangeInline = { bg = U.darken(C.coral, 0.14, C.base) },
-			GitSignsDeleteInline = { bg = U.darken(C.red, 0.36, C.base) },
+			GitSignsAddInline = { bg = U.darken(C.sage, 0.36, C.bgbase) },
+			GitSignsChangeInline = { bg = U.darken(C.coral, 0.14, C.bgbase) },
+			GitSignsDeleteInline = { bg = U.darken(C.ember, 0.36, C.bgbase) },
 		}
 	end
 end

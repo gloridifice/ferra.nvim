@@ -17,7 +17,7 @@ This repo stripped catppuccin's 4 flavours (latte/frappe/macchiato/mocha) down t
 
 ## How colours work
 
-Do **not** put raw hex strings in `groups/*.lua`. Every highlight uses palette keys like `C.text`, `C.pink`, `C.overlay2`. The actual hex values live only in `lua/ferra/palettes/ferra.lua`.
+Do **not** put raw hex strings in `groups/*.lua`. Every highlight uses palette keys like `C.text`, `C.pink`, `C.bg32`. The actual hex values live only in `lua/ferra/palettes/ferra.lua`.
 
 | ferra colour | palette key(s) it maps to |
 |---|---|
@@ -63,4 +63,4 @@ Tests live in `tests/` and use plenary.nvim's busted wrapper. CI runs them on ev
 
 - `lua/ferra/groups/` still uses catppuccin palette key names (`C.coral`, `C.pink`, etc.) because the 11 ferra colours are **mapped** onto those 26 keys. Don't rename the keys unless you also rewrite every group file.
 - `@property` and `@variable.member` were previously `lavender` (rose) and were changed to `text` (blush) per user request. If debugging colour issues, use `:Inspect` on the token under cursor.
-- The `weaken_delimiters` option toggles `Delimiter` and `@punctuation.bracket` between `C.text` (blush, default) and `C.overlay2` (bark).
+- The `weaken_delimiters` option toggles `Delimiter` and `@punctuation.bracket` between `C.text` (blush, default) and `C.bg32` (bark).

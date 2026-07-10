@@ -1,4 +1,4 @@
-﻿---@param colors_override (FerraIntegrationLualineOverride | FerraIntegrationLualineOverrideFn)?
+---@param colors_override (FerraIntegrationLualineOverride | FerraIntegrationLualineOverrideFn)?
 ---@param colors FerraColors<string>
 local function get_colors(colors_override, colors)
 	if colors_override == nil then
@@ -14,40 +14,40 @@ return function(flavour)
 	local C = require("ferra.palettes").get_palette(flavour)
 	local O = require("ferra").options
 
-	local transparent_bg = O.transparent_background and "NONE" or C.mantle
+	local transparent_bg = O.transparent_background and "NONE" or C.bg1
 	local default_colors = {
 		normal = {
-			a = { bg = C.coral, fg = C.mantle, gui = "bold" },
-			b = { bg = C.surface0, fg = C.coral },
-			c = { bg = transparent_bg, fg = C.text },
+			a = { bg = C.coral, fg = C.bg1, gui = "bold" },
+			b = { bg = C.bg1, fg = C.coral },
+			c = { bg = transparent_bg, fg = C.blush },
 		},
 
 		insert = {
-			a = { bg = C.green, fg = C.base, gui = "bold" },
-			b = { bg = C.surface0, fg = C.green },
+			a = { bg = C.sage, fg = C.bgbase, gui = "bold" },
+			b = { bg = C.bg1, fg = C.sage },
 		},
 
 		terminal = {
-			a = { bg = C.green, fg = C.base, gui = "bold" },
-			b = { bg = C.surface0, fg = C.green },
+			a = { bg = C.sage, fg = C.bgbase, gui = "bold" },
+			b = { bg = C.bg1, fg = C.sage },
 		},
 
 		command = {
-			a = { bg = C.peach, fg = C.base, gui = "bold" },
-			b = { bg = C.surface0, fg = C.peach },
+			a = { bg = C.coral, fg = C.bgbase, gui = "bold" },
+			b = { bg = C.bg1, fg = C.coral },
 		},
 		visual = {
-			a = { bg = C.mauve, fg = C.base, gui = "bold" },
-			b = { bg = C.surface0, fg = C.mauve },
+			a = { bg = C.mauve, fg = C.bgbase, gui = "bold" },
+			b = { bg = C.bg1, fg = C.mauve },
 		},
 		replace = {
-			a = { bg = C.red, fg = C.base, gui = "bold" },
-			b = { bg = C.surface0, fg = C.red },
+			a = { bg = C.ember, fg = C.bgbase, gui = "bold" },
+			b = { bg = C.bg1, fg = C.ember },
 		},
 		inactive = {
 			a = { bg = transparent_bg, fg = C.coral },
-			b = { bg = transparent_bg, fg = C.surface1, gui = "bold" },
-			c = { bg = transparent_bg, fg = C.overlay0 },
+			b = { bg = transparent_bg, fg = C.bg2, gui = "bold" },
+			c = { bg = transparent_bg, fg = C.bg3 },
 		},
 	}
 	local overrides = O.integrations.lualine

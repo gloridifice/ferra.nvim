@@ -1,16 +1,16 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/HiPhish/nvim-ts-rainbow2"
 
 function M.get()
 	return {
-		TSRainbowRed = { fg = C.red },
-		TSRainbowYellow = { fg = C.yellow },
+		TSRainbowRed = { fg = C.ember },
+		TSRainbowYellow = { fg = C.honey },
 		TSRainbowBlue = { fg = C.coral },
-		TSRainbowOrange = { fg = C.peach },
-		TSRainbowGreen = { fg = C.green },
+		TSRainbowOrange = { fg = C.coral },
+		TSRainbowGreen = { fg = C.sage },
 		TSRainbowViolet = { fg = C.mauve },
-		TSRainbowCyan = { fg = C.teal },
+		TSRainbowCyan = { fg = C.sage },
 	}
 end
 

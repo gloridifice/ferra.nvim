@@ -1,21 +1,21 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
 
 function M.get()
 	return {
 		TreesitterContext = {
-			fg = C.text,
-			bg = O.transparent_background and C.none or C.mantle,
+			fg = C.blush,
+			bg = O.transparent_background and C.none or C.bg1,
 		},
 		TreesitterContextBottom = {
-			sp = O.transparent_background and C.dim or C.surface0,
+			sp = O.transparent_background and C.dim or C.bg1,
 		},
 		TreesitterContextLineNumber = O.transparent_background and {
-			fg = C.rosewater,
+			fg = C.blush,
 		} or {
-			fg = C.surface1,
-			bg = C.mantle,
+			fg = C.bg2,
+			bg = C.bg1,
 		},
 	}
 end

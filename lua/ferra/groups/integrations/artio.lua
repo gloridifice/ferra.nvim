@@ -1,4 +1,4 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/comfysage/artio.nvim"
 
@@ -7,18 +7,18 @@ function M.get()
 
 	return {
 		ArtioNormal = {
-			fg = C.text,
-			bg = transparent_background and "NONE" or C.mantle,
+			fg = C.blush,
+			bg = transparent_background and "NONE" or C.bg1,
 		},
 		ArtioSel = {
-			fg = C.flamingo,
-			bg = C.surface0,
+			fg = C.coral,
+			bg = C.bg1,
 			style = { "bold" },
 		},
 		ArtioMatch = { fg = C.coral },
-		ArtioPointer = { fg = C.flamingo },
+		ArtioPointer = { fg = C.coral },
 		ArtioPrompt = { fg = C.coral },
-		ArtioMark = { fg = C.yellow },
+		ArtioMark = { fg = C.honey },
 		ArtioMarkLine = { link = "Visual" },
 	}
 end

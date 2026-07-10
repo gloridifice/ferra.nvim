@@ -1,47 +1,47 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
 
 function M.get()
-	local active_bg = O.transparent_background and C.none or C.mantle
-	local inactive_bg = O.transparent_background and C.none or C.base
+	local active_bg = O.transparent_background and C.none or C.bg1
+	local inactive_bg = O.transparent_background and C.none or C.bgbase
 	return {
 		NeoTreeDirectoryName = { fg = C.coral },
 		NeoTreeDirectoryIcon = { fg = C.coral },
-		NeoTreeNormal = { fg = C.text, bg = active_bg },
-		NeoTreeNormalNC = { fg = C.text, bg = active_bg },
-		NeoTreeExpander = { fg = C.overlay0 },
-		NeoTreeIndentMarker = { fg = C.overlay0 },
+		NeoTreeNormal = { fg = C.blush, bg = active_bg },
+		NeoTreeNormalNC = { fg = C.blush, bg = active_bg },
+		NeoTreeExpander = { fg = C.bg3 },
+		NeoTreeIndentMarker = { fg = C.bg3 },
 		NeoTreeRootName = { fg = C.coral, style = { "bold" } },
-		NeoTreeSymbolicLinkTarget = { fg = C.pink },
-		NeoTreeModified = { fg = C.peach },
+		NeoTreeSymbolicLinkTarget = { fg = C.rose },
+		NeoTreeModified = { fg = C.coral },
 
-		NeoTreeGitAdded = { fg = C.green },
-		NeoTreeGitConflict = { fg = C.red },
-		NeoTreeGitDeleted = { fg = C.red },
-		NeoTreeGitIgnored = { fg = C.overlay0 },
-		NeoTreeGitModified = { fg = C.pink },
-		NeoTreeGitUnstaged = { fg = C.red },
+		NeoTreeGitAdded = { fg = C.sage },
+		NeoTreeGitConflict = { fg = C.ember },
+		NeoTreeGitDeleted = { fg = C.ember },
+		NeoTreeGitIgnored = { fg = C.bg3 },
+		NeoTreeGitModified = { fg = C.rose },
+		NeoTreeGitUnstaged = { fg = C.ember },
 		NeoTreeGitUntracked = { fg = C.mauve },
-		NeoTreeGitStaged = { fg = C.green },
+		NeoTreeGitStaged = { fg = C.sage },
 
 		NeoTreeFloatBorder = { link = "FloatBorder" },
 		NeoTreeFloatTitle = { link = "FloatTitle" },
-		NeoTreeTitleBar = { fg = C.mantle, bg = C.coral },
+		NeoTreeTitleBar = { fg = C.bg1, bg = C.coral },
 
-		NeoTreeFileNameOpened = { fg = C.pink },
-		NeoTreeDimText = { fg = C.overlay1 },
-		NeoTreeFilterTerm = { fg = C.green, style = { "bold" } },
-		NeoTreeTabActive = { bg = active_bg, fg = C.lavender, style = { "bold" } },
-		NeoTreeTabInactive = { bg = inactive_bg, fg = C.overlay0 },
+		NeoTreeFileNameOpened = { fg = C.rose },
+		NeoTreeDimText = { fg = C.bg3 },
+		NeoTreeFilterTerm = { fg = C.sage, style = { "bold" } },
+		NeoTreeTabActive = { bg = active_bg, fg = C.rose, style = { "bold" } },
+		NeoTreeTabInactive = { bg = inactive_bg, fg = C.bg3 },
 		NeoTreeTabSeparatorActive = { fg = active_bg, bg = active_bg },
 		NeoTreeTabSeparatorInactive = { fg = inactive_bg, bg = inactive_bg },
-		NeoTreeVertSplit = { fg = C.base, bg = inactive_bg },
+		NeoTreeVertSplit = { fg = C.bgbase, bg = inactive_bg },
 		NeoTreeWinSeparator = {
-			fg = O.transparent_background and C.surface1 or C.base,
-			bg = O.transparent_background and C.none or C.base,
+			fg = O.transparent_background and C.bg2 or C.bgbase,
+			bg = O.transparent_background and C.none or C.bgbase,
 		},
-		NeoTreeStatusLineNC = { fg = C.mantle, bg = C.mantle },
+		NeoTreeStatusLineNC = { fg = C.bg1, bg = C.bg1 },
 	}
 end
 

@@ -1,29 +1,29 @@
-﻿local M = {}
+local M = {}
 
 M.url = "https://github.com/rcarriga/nvim-dap-ui"
 
 function M.get()
 	return {
-		DapUIScope = { fg = C.sky },
+		DapUIScope = { fg = C.mist },
 		DapUIType = { fg = C.mauve },
-		DapUIValue = { fg = C.sky },
-		DapUIVariable = { fg = C.text },
-		DapUIModifiedValue = { fg = C.peach },
-		DapUIDecoration = { fg = C.sky },
-		DapUIThread = { fg = C.green },
-		DapUIStoppedThread = { fg = C.sky },
-		DapUISource = { fg = C.lavender },
-		DapUILineNumber = { fg = C.sky },
+		DapUIValue = { fg = C.mist },
+		DapUIVariable = { fg = C.blush },
+		DapUIModifiedValue = { fg = C.coral },
+		DapUIDecoration = { fg = C.mist },
+		DapUIThread = { fg = C.sage },
+		DapUIStoppedThread = { fg = C.mist },
+		DapUISource = { fg = C.rose },
+		DapUILineNumber = { fg = C.mist },
 		DapUIFloatBorder = { link = "FloatBorder" },
 
-		DapUIWatchesEmpty = { fg = C.maroon },
-		DapUIWatchesValue = { fg = C.green },
-		DapUIWatchesError = { fg = C.maroon },
+		DapUIWatchesEmpty = { fg = C.ember },
+		DapUIWatchesValue = { fg = C.sage },
+		DapUIWatchesError = { fg = C.ember },
 
-		DapUIBreakpointsPath = { fg = C.sky },
-		DapUIBreakpointsInfo = { fg = C.green },
-		DapUIBreakpointsCurrentLine = { fg = C.green, style = { "bold" } },
-		DapUIBreakpointsDisabledLine = { fg = C.surface2 },
+		DapUIBreakpointsPath = { fg = C.mist },
+		DapUIBreakpointsInfo = { fg = C.sage },
+		DapUIBreakpointsCurrentLine = { fg = C.sage, style = { "bold" } },
+		DapUIBreakpointsDisabledLine = { fg = C.bg2 },
 
 		DapUIStepOver = { fg = C.coral },
 		DapUIStepOverNC = { link = "DapUIStepOver" },
@@ -33,16 +33,16 @@ function M.get()
 		DapUIStepBackNC = { link = "DapUIStepBack" },
 		DapUIStepOut = { fg = C.coral },
 		DapUIStepOutNC = { link = "DapUIStepOut" },
-		DapUIStop = { fg = C.red },
+		DapUIStop = { fg = C.ember },
 		DapUIStopNC = { link = "DapUIStop" },
-		DapUIPlayPause = { fg = C.green },
+		DapUIPlayPause = { fg = C.sage },
 		DapUIPlayPauseNC = { link = "DapUIPlayPause" },
-		DapUIRestart = { fg = C.green },
+		DapUIRestart = { fg = C.sage },
 		DapUIRestartNC = { link = "DapUIRestart" },
-		DapUIUnavailable = { fg = C.surface1 },
+		DapUIUnavailable = { fg = C.bg2 },
 		DapUIUnavailableNC = { link = "DapUIUnavailable" },
 
-		DapUIWinSelect = { fg = C.peach },
+		DapUIWinSelect = { fg = C.coral },
 	}
 end
 
