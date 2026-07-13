@@ -82,9 +82,9 @@ function M.get()
 		ComplHintMore = { link = "Question" }, -- The additional information of the virtual text.
 		Question = { fg = C.coral }, -- |hit-enter| prompt and yes/no questions
 		QuickFixLine = { bg = U.darken(C.bg2, 0.70, C.bgbase), style = { "bold" } }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-		Search = { bg = U.darken(C.mist, 0.30, C.bgbase), fg = C.blush }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-		IncSearch = { bg = U.darken(C.mist, 0.90, C.bgbase), fg = C.bg1 }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-		CurSearch = { bg = C.ember, fg = C.bg1 }, -- 'cursearch' highlighting: highlights the current search you're on differently
+		Search = { bg = C.bg1, style = { "italic", "bold" } }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+		IncSearch = { bg = C.bg1, style = { "italic", "bold" } }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+		CurSearch = { bg = C.bg1, style = { "italic", "bold" } }, -- 'cursearch' highlighting: highlights the current search you're on differently
 		SpecialKey = { link = "NonText" }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' textspace. |hl-Whitespace|
 		SpellBad = { sp = C.ember, style = { "undercurl" } }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
 		SpellCap = { sp = C.honey, style = { "undercurl" } }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
@@ -110,4 +110,3 @@ function M.get()
 end
 
 return M
-

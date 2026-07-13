@@ -85,10 +85,10 @@ function M.get()
 		MiniJump2dSpotAhead = { bg = C.dim, fg = C.sage },
 		MiniJump2dSpotUnique = { bg = C.bgbase, fg = C.mist, style = { "bold" } },
 
-		MiniMapNormal = { link = "NormalFloat" },
-		MiniMapSymbolCount = { link = "Special" },
-		MiniMapSymbolLine = { link = "Title" },
-		MiniMapSymbolView = { link = "Delimiter" },
+		MiniMapNormal = { fg = C.bg1 },
+		MiniMapSymbolCount = { fg = C.rose },
+		MiniMapSymbolLine = { fg = C.blush },
+		MiniMapSymbolView = { fg = C.bg1 },
 
 		MiniNotifyBorder = { link = "FloatBorder" },
 		MiniNotifyNormal = { link = "NormalFloat" },
